@@ -1,0 +1,33 @@
+{
+  "cards": [
+    {
+      "id": "card-1",
+      "parentCard": false
+    },
+    {
+      "id": "card-2",
+      "parentCard": "card-1"
+    },
+    {
+      "id": "card-3",
+      "parentCard": "card-1"
+    }
+  ],
+
+  "content": [
+    {
+      "id": "card-1",
+      "title": "Title",
+      "advice": false
+    }
+  ],
+
+  "character": [
+    {
+      "id": "card-1",
+      "name": "Character",
+      "url": "./assets/img/characters/character.jpg"
+    }
+  ]
+
+}
