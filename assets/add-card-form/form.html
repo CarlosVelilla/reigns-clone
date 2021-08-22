@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form to add cards</title>
+  <link rel="icon" href="favicon.svg">
+  <script src="/assets/add-card-form/functions.js" defer async></script>
+</head>
+<body>
+  <h1>Add new card</h1>
+  <form id="addCardForm">
+    <h2>General info</h2>
+    <label for="card-id">Card ID</label>
+    <input type="text" id="card-id" name="card-id">
+
+    <label for="card-parent">Card parent</label>
+    <input type="text" id="card-parent" name="card-parent">
+
+    <h2>Content</h2>
+    <label for="card-title">Title</label>
+    <input type="text" id="card-title" name="card-title">
+
+    <label for="card-advice">Advice</label>
+    <input type="text" id="card-advice" name="card-advice">
+
+    <h2>Character</h2>
+    <label for="card-character-name">Character name</label>
+    <input type="text" id="card-character-name" name="character-name">
+        
+    <label for="card-character-background">Character background</label>
+    <input type="text" id="card-character-background" name="character-background">
+
+    <label for="card-character-url">Character URL (img)</label>
+    <input type="text" id="card-character-url" name="character-url" value="./assets/img/characters/character.jpg">
+    
+    <h2>Accept</h2>
+    <label for="card-toCardAccept">Next card if accept</label>
+    <input type="text" id="card-toCardAccept" name="card-toCardAccept">
+
+    <label for="card-textAccept">Accept text</label>
+    <input type="text" id="card-textAccept" name="card-textAccept">
+
+    <h3>Modifiers if accept</h3>
+      <label for="religion-accept">Religion</label>
+      <input type="number" value="0" id="religion-accept" name="religion-accept">
+
+      <label for="population-accept">Population</label>
+      <input type="number" value="0" id="population-accept" name="population-accept">
+
+      <label for="army-accept">Army</label>
+      <input type="number" value="0" id="army-accept" name="army-accept">
+
+      <label for="money-accept">Money</label>
+      <input type="number" value="0" id="money-accept" name="money-accept">
+
+      <label for="magic-accept">Magic</label>
+      <input type="number" value="0" id="magic-accept" name="magic-accept">
+
+      <h2>Decline</h2>
+      <label for="card-toCardDecline">Next card if decline</label>
+      <input type="text" id="card-toCardDecline" name="card-toCardDecline">
+  
+      <label for="card-textDecline">Decline text</label>
+      <input type="text" id="card-textDecline" name="card-textDecline">
+  
+      <h3>Modifiers if decline</h3>
+        <label for="religion-decline">Religion</label>
+        <input type="number" value="0" id="religion-decline" name="religion-decline">
+  
+        <label for="population-decline">Population</label>
+        <input type="number" value="0" id="population-decline" name="population-decline">
+  
+        <label for="army-decline">Army</label>
+        <input type="number" value="0" id="army-decline" name="army-decline">
+  
+        <label for="money-decline">Money</label>
+        <input type="number" value="0" id="money-decline" name="money-decline">
+  
+        <label for="magic-decline">Magic</label>
+        <input type="number" value="0" id="magic-decline" name="magic-decline">
+
+    <h2>Send</h2>
+    <input type="submit">
+  </form>
+
+</body>
+</html>

@@ -7,27 +7,90 @@
     {
       "id": "card-2",
       "parentCard": "card-1"
-    },
-    {
-      "id": "card-3",
-      "parentCard": "card-1"
     }
   ],
-
   "content": [
     {
       "id": "card-1",
       "title": "Title",
       "advice": false
+    },
+    {
+      "id": "card-2",
+      "title": "Remove catholic church and get their money",
+      "advice": "You can't rule without church, but you can make them weaker"
     }
   ],
-
   "character": [
     {
       "id": "card-1",
       "name": "Character",
+      "background": "#eee",
+      "url": "./assets/img/characters/character.jpg"
+    },
+    {
+      "id": "card-2",
+      "name": "Character",
+      "background": "#fff",
       "url": "./assets/img/characters/character.jpg"
     }
+  ],
+  "accept": [
+    {
+      "id": "card1",
+      "toCard": "card-2",
+      "text": "Accept text"
+    },
+    {
+      "id": "card-2",
+      "toCard": "card-4",
+      "text": "Accept text"
+    }
+  ],
+  "decline": [
+    {
+      "id": "card1",
+      "toCard": "card-3",
+      "text": "Decline text"
+    },
+    {
+      "id": "card-2",
+      "toCard": "card-5",
+      "text": "Decline text"
+    }
+  ],
+  "modifiers": [
+    {
+      "id": "card1-accept",
+      "religion": 0,
+      "population": 0,
+      "army": 0,
+      "money": 0,
+      "magic": 0
+    },
+    {
+      "id": "card1-decline",
+      "religion": 0,
+      "population": 0,
+      "army": 0,
+      "money": 0,
+      "magic": 0
+    },
+    {
+      "id": "card-2-decline",
+      "religion": 1,
+      "population": 0,
+      "army": 0,
+      "money": 0,
+      "magic": 0
+    },
+    {
+      "id": "card-2-accept",
+      "religion": -3,
+      "population": 0,
+      "army": 0,
+      "money": 2,
+      "magic": 0
+    }
   ]
-
 }
