@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../icons/icomoon.eot?yo046j");
+  src: url("../icons/icomoon.eot?yo046j#iefix") format("embedded-opentype"),
+    url("../icons/icomoon.ttf?yo046j") format("truetype"),
+    url("../icons/icomoon.woff?yo046j") format("woff"),
+    url("../icons/icomoon.svg?yo046j#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-population:before {
+  content: "\e900";
+}
+.icon-church:before {
+  content: "\e901";
+}
+.icon-power:before {
+  content: "\e902";
+}
+.icon-home:before {
+  content: "\e903";
+}
+.icon-money:before {
+  content: "\e904";
+}
+.icon-magic:before {
+  content: "\e905";
+}
+.icon-coin-dollar:before {
+  content: "\e93b";
+}
+.icon-user:before {
+  content: "\e971";
+}
+.icon-magic-wand:before {
+  content: "\e997";
+}

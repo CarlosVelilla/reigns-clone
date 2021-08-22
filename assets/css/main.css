@@ -1,0 +1,55 @@
+* {
+  border: solid 1px red;
+}
+body {
+  background-color: wheat;
+}
+
+.container {
+  width: 100wh;
+  margin-top: 5%;
+}
+
+.container__card {
+  background-color: white;
+  margin: auto;
+  width: 20%;
+}
+
+.container__card--values {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+
+.container__card--attr {
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+}
+
+.container__card--text {
+  padding: 1rem;
+}
+
+/*.container__card--text:first-letter {
+  text-transform: uppercase;
+  font-size: 36px;
+}*/
+
+.container__card--btns {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+
+.container__cards--action {
+  width: 100%;
+}
+
+/* Utils */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
