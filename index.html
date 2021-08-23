@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Veli Games</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script type="module" src="/assets/js/main.js"></script>
   </head>
   <body>
     <div class="container">
@@ -18,16 +19,21 @@
           <div class="container__card--attr icon-magic flex-center"></div>
         </div>
         <div class="container__card--info">
-          <div class="container__card--pic">
-            <img src="./front.jpg" alt="" />
+          <div class="container__card--pic" id="character-container">
+            <img src="./front.jpg" alt="Character image" id="character-image"/>
           </div>
-          <div class="container__card--text">
+          <!-- ! ASSIGN DIV TO THIS P? PENDING @SALVA -->
+          <p class="" id="character-name">Name</p>
+          <div class="container__card--text" id="card-text">
+            laborum quis ipsum ipsam incidunt voluptates doloribus illo tempore?
+          </div>
+          <div class="container__card--advice" id="card-advice">
             laborum quis ipsum ipsam incidunt voluptates doloribus illo tempore?
           </div>
         </div>
         <div class="container__card--btns">
-          <button class="container__cards--action">Decline</button>
-          <button class="container__cards--action">Accept</button>
+          <button class="container__cards--action" id="decline-button" data-action="decline">Decline</button>
+          <button class="container__cards--action" id="accept-button" data-action="accept">Accept</button>
         </div>
       </div>
     </div>
