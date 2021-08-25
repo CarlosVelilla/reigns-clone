@@ -1,13 +1,11 @@
-// FUNCTIONS TO CREATE: FLIPCARD, ACCEPT/DECLINE CARD, MODIFY FACTORS
-
 /* GLOBAL VARIABLES */
 const URL = 'http://localhost:3000'
 
 /* EVENT LISTENERS */
-document.getElementById('decline-button').addEventListener('click', actionCard)
-document.getElementById('accept-button').addEventListener('click', actionCard)
+document.getElementById('decline-button').addEventListener('click', nextCard)
+document.getElementById('accept-button').addEventListener('click', nextCard)
 
-async function createCard(cardId) {
+function createCard(cardId) {
   /* LOCATING ELEMENTS IN DOM */
   const ACCEPTBTN = document.getElementById('accept-button')
   const DECLINEBTN = document.getElementById('decline-button')
@@ -17,15 +15,22 @@ async function createCard(cardId) {
   const CHARACTERNAME = document.getElementById('character-name')
   const CHARACTERCONTAINER = document.getElementById('character-container')
 
+  /* ASSIGN NEXT CARD ID TO BUTTONS */
+  fetch(`${URL}/accept/${cardId}`)
+    .then(response => response.json())
+    .then(data => ACCEPTBTN.setAttribute('data-tocard', data.toCard))
+  
+  fetch(`${URL}/decline/${cardId}`)
+    .then(response => response.json())
+    .then(data => DECLINEBTN.setAttribute('data-tocard', data.toCard))
+
   /* PRINTING CARD TITLE AND ADVICE */
   fetch(`${URL}/content/${cardId}`)
     .then(response => response.json())
     .then(data => {
-      ACCEPTBTN.setAttribute('data-cardid', data.id)
-      DECLINEBTN.setAttribute('data-cardid', data.id)
       TEXT.textContent = data.title
       ADVICE.textContent = data.advice
-    })
+  })
 
   /* PRINTING CHARACTER INFO */
   fetch(`${URL}/character/${cardId}`)
@@ -34,21 +39,27 @@ async function createCard(cardId) {
       CHARACTERIMAGE.src = data.url
       CHARACTERNAME.textContent = data.name
       CHARACTERCONTAINER.style.backgroundColor = data.background
-    })
+  })
 }
 
-async function actionCard(event) {
-  let cardId = event.target.dataset.cardid
-  let action = event.target.dataset.action
-  let toCard
+async function nextCard(event) {
+  /* TODO: DISMISS CURRENT CARD, MODIFY FACTORS */
+  createCard(event.target.dataset.tocard)
+  /* TODO: FLIP CARD */
 
-  await fetch(`${URL}/${action}/${cardId}`)
-    .then(response => response.json())
-    .then(data => {
-      toCard = data.toCard
-  })
+}
 
-  /* TODO: DISMISS CURRENT CARD, CREATE NEXT CARD (CREATELEMENT?), FLIP NEXT CARD */
+function editFactors(church, home, power, money, magic) {
+  // ? THINK ABOUT REFACTORING, QUERYSELECTORALL WITH A DATA ATT AND FOREACH THEN
+
+  /* LOCATING ELEMENTS IN DOM */
+  const churchElement = document.getElementById('icon-church')
+  const homeElement = document.getElementById('icon-home')
+  const powerElement = document.getElementById('icon-power')
+  const moneyElement = document.getElementById('icon-money')
+  const magicElement = document.getElementById('icon-magic')
+
+  // TODO WAIT TILL THERE'S AN EXAMPLE OF THE CSS
 }
 
 export { createCard }

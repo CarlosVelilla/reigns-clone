@@ -37,7 +37,7 @@
   ],
   "accept": [
     {
-      "id": "card1",
+      "id": "card-1",
       "toCard": "card-2",
       "text": "Accept text"
     },
@@ -49,7 +49,7 @@
   ],
   "decline": [
     {
-      "id": "card1",
+      "id": "card-1",
       "toCard": "card-3",
       "text": "Decline text"
     },
