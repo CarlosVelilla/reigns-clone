@@ -6,6 +6,7 @@ FORM.addEventListener('submit', (event) => {
   let formData = new FormData(FORM)
   let parentCardText = (formData.get('card-parent') == "") ? false : formData.get('card-parent')
   let advice = (formData.get('card-advice') == "") ? false : formData.get('card-advice')
+  let randomUrlImg = `https://avatars.dicebear.com/api/avataaars/${Math.ceil(Math.random()*100)}.svg`
 
   fetch(`${URL}/cards`, {
     method: 'POST',
@@ -31,7 +32,8 @@ FORM.addEventListener('submit', (event) => {
       id: formData.get('card-id'),
       name: formData.get('character-name'),
       background: formData.get('character-background'),
-      url: formData.get('character-url')
+      url: randomUrlImg
+      // url: formData.get('character-url')
     })})
 
   fetch(`${URL}/accept`, {
