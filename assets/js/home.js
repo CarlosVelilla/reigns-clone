@@ -27,8 +27,7 @@ function loadGame() {
                 icon-home
                 flex-center
                 point-amount
-                pa-home
-              "
+              " data-icon="home"
             ></div>
             <div
               class="
@@ -36,8 +35,8 @@ function loadGame() {
                 icon-church
                 flex-center
                 point-amount
-                pa-church
               "
+              data-icon="church"
             ></div>
             <div
               class="
@@ -45,8 +44,8 @@ function loadGame() {
                 icon-power
                 flex-center
                 point-amount
-                pa-power
               "
+              data-icon="power"
             ></div>
             <div
               class="
@@ -54,8 +53,8 @@ function loadGame() {
                 icon-money
                 flex-center
                 point-amount
-                pa-money
               "
+              data-icon="money"
             ></div>
             <div
               class="
@@ -63,8 +62,8 @@ function loadGame() {
                 icon-magic
                 flex-center
                 point-amount
-                pa-magic
               "
+              data-icon="magic"
             ></div>
           </div>
           <div class="flip-card">
