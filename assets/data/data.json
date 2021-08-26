@@ -7,6 +7,10 @@
     {
       "id": "card-2",
       "parentCard": "card-1"
+    },
+    {
+      "id": "card-4",
+      "parentCard": "card-2"
     }
   ],
   "content": [
@@ -19,6 +23,11 @@
       "id": "card-2",
       "title": "Remove catholic church and get their money",
       "advice": "You can't rule without church, but you can make them weaker"
+    },
+    {
+      "id": "card-4",
+      "title": "Test title",
+      "advice": "Test advice"
     }
   ],
   "character": [
@@ -33,6 +42,12 @@
       "name": "Character",
       "background": "#fff",
       "url": "https://avatars.dicebear.com/api/avataaars/6.svg"
+    },
+    {
+      "id": "card-4",
+      "name": "Test character",
+      "background": "",
+      "url": "https://avatars.dicebear.com/api/avataaars/35.svg"
     }
   ],
   "accept": [
@@ -45,6 +60,11 @@
       "id": "card-2",
       "toCard": "card-4",
       "text": "Accept text"
+    },
+    {
+      "id": "card-4",
+      "toCard": "card-6",
+      "text": "Test accept text"
     }
   ],
   "decline": [
@@ -57,6 +77,11 @@
       "id": "card-2",
       "toCard": "card-5",
       "text": "Decline text"
+    },
+    {
+      "id": "card-4",
+      "toCard": "card-7",
+      "text": "Test decline text"
     }
   ],
   "modifiers": [
@@ -91,6 +116,22 @@
       "army": 0,
       "money": 2,
       "magic": 0
+    },
+    {
+      "id": "card-4-accept",
+      "religion": 2,
+      "population": -1,
+      "army": 0,
+      "money": -1,
+      "magic": 0
+    },
+    {
+      "id": "card-4-decline",
+      "religion": 0,
+      "population": 1,
+      "army": 0,
+      "money": 3,
+      "magic": -1
     }
   ]
 }

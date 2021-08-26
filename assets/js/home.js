@@ -1,4 +1,5 @@
 import { getRandomName } from "./names-functionality.js";
+import { nextCard } from "./cards.js"
 
 //Variables
 const inputDice = document.getElementById("input--dice");
@@ -67,7 +68,7 @@ function loadGame() {
             ></div>
           </div>
           <div class="flip-card">
-            <div class="flip-card--inner">
+            <div id="flip-card--inner" class="flip-card--inner">
               <div class="container__card--info card-front" data-displayed="true">
                 <div class="container__card--pic">
                   <img
@@ -96,7 +97,7 @@ function loadGame() {
                   />
                 </div>
                 <div class="container__card--character" data-name>
-                  Name
+                  Nametest
                 </div>
                 <div class="container__card--text" data-text>
                   laborum quis ipsum ipsam incidunt voluptates doloribus illo
@@ -114,6 +115,7 @@ function loadGame() {
               class="container__cards--action"
               id="decline-button"
               data-action="decline"
+              data-toCard="card-2"
             >
               Decline
             </button>
@@ -121,12 +123,15 @@ function loadGame() {
               class="container__cards--action"
               id="accept-button"
               data-action="accept"
+              data-toCard="card-2"
             >
               Accept
             </button>
           </div>
         </div>`;
     mainContainer.classList.remove("disappear");
+    document.getElementById('decline-button').addEventListener('click', nextCard)
+    document.getElementById('accept-button').addEventListener('click', nextCard)
   }, 500);
 }
 

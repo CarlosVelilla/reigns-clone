@@ -1,19 +1,18 @@
 /* GLOBAL VARIABLES */
 const URL = "http://localhost:3000";
 
-/* EVENT LISTENERS */
-//document.getElementById('decline-button').addEventListener('click', nextCard)
-//document.getElementById('accept-button').addEventListener('click', nextCard)
-
 function createCard(cardId) {
-  /* LOCATING ELEMENTS IN DOM */
   const ACCEPTBTN = document.getElementById("accept-button");
   const DECLINEBTN = document.getElementById("decline-button");
-  const TEXT = document.getElementById("card-text");
-  const ADVICE = document.getElementById("card-advice");
-  const CHARACTERIMAGE = document.getElementById("character-image");
-  const CHARACTERNAME = document.getElementById("character-name");
-  const CHARACTERCONTAINER = document.getElementById("character-container");
+
+  /* LOCATING ELEMENTS IN THE HIDDEN CARD SIDE */
+  let hiddencard = document.querySelector("[data-displayed='false']")
+  const TEXT = hiddencard.querySelector("[data-text]");
+  const ADVICE = hiddencard.querySelector("[data-advice]");
+  const CHARACTERIMAGE = hiddencard.querySelector("[data-image]");
+  const CHARACTERNAME = hiddencard.querySelector("[data-name]");
+  // ! REVISAR CUÁL ES EL CONTENEDOR CON BACKGROUND PARA EL PERSONAJE:
+  // const CHARACTERCONTAINER = hiddencard.querySelector("[data-]");
 
   /* ASSIGN NEXT CARD ID TO BUTTONS */
   fetch(`${URL}/accept/${cardId}`)
@@ -38,14 +37,22 @@ function createCard(cardId) {
     .then((data) => {
       CHARACTERIMAGE.src = data.url;
       CHARACTERNAME.textContent = data.name;
-      CHARACTERCONTAINER.style.backgroundColor = data.background;
+      // CHARACTERCONTAINER.style.backgroundColor = data.background;
     });
 }
 
 async function nextCard(event) {
-  /* TODO: DISMISS CURRENT CARD, MODIFY FACTORS */
+  /* TODO MODIFY FACTORS */
   createCard(event.target.dataset.tocard);
-  /* TODO: FLIP CARD */
+  toggleDataDisplayed()
+  document.getElementById("flip-card--inner").classList.toggle("test")
+}
+
+function toggleDataDisplayed() {
+  let hiddencard = document.querySelector("[data-displayed='false']")
+  let showedcard = document.querySelector("[data-displayed='true']")
+  hiddencard.dataset.displayed="true"
+  showedcard.dataset.displayed="false"
 }
 
 function editFactors(church, home, power, money, magic) {
@@ -61,4 +68,4 @@ function editFactors(church, home, power, money, magic) {
   // TODO WAIT TILL THERE'S AN EXAMPLE OF THE CSS
 }
 
-export { createCard };
+export { createCard, nextCard };
