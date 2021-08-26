@@ -4,116 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Veli Games</title>
+    <title>Your Highness</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <script type="module" src="/assets/js/main.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="container__card">
-        <div class="container__card--values">
-          <div
-            class="
-              container__card--attr
-              icon-home
-              flex-center
-              point-amount
-              pa-home
-            "
-          ></div>
-          <div
-            class="
-              container__card--attr
-              icon-church
-              flex-center
-              point-amount
-              pa-church
-            "
-          ></div>
-          <div
-            class="
-              container__card--attr
-              icon-power
-              flex-center
-              point-amount
-              pa-power
-            "
-          ></div>
-          <div
-            class="
-              container__card--attr
-              icon-money
-              flex-center
-              point-amount
-              pa-money
-            "
-          ></div>
-          <div
-            class="
-              container__card--attr
-              icon-magic
-              flex-center
-              point-amount
-              pa-magic
-            "
-          ></div>
+    <div id="container" class="container">
+      <div id="container__start" class="container__start">
+        <div class="container__start--logo">
+          <img src="./assets/img/logo.png" alt="logo" />
         </div>
-        <div class="flip-card">
-          <div class="container__card--info">
-            <div class="container__card--pic">
-              <img
-                src="https://avatars.dicebear.com/api/avataaars/4.svg"
-                alt=""
-              />
-            </div>
-            <div class="container__card--character" id="character-name">
-              Name
-            </div>
-            <div class="container__card--text" id="card-text">
-              laborum quis ipsum ipsam incidunt voluptates doloribus illo
-              tempore?
-            </div>
-            <div class="container__card--advice" id="card-advice">
-              laborum quis ipsum ipsam incidunt voluptates doloribus illo
-              tempore?
-            </div>
-          </div>
-          <div class="container__card--info">
-            <div class="container__card--pic" id="character-container">
-              <img
-                src="https://avatars.dicebear.com/api/avataaars/5.svg"
-                alt="Character image"
-                id="character-image"
-              />
-            </div>
-            <div class="container__card--character" id="character-name">
-              Name
-            </div>
-            <div class="container__card--text" id="card-text">
-              laborum quis ipsum ipsam incidunt voluptates doloribus illo
-              tempore?
-            </div>
-            <div class="container__card--advice" id="card-advice">
-              laborum quis ipsum ipsam incidunt voluptates doloribus illo
-              tempore?
-            </div>
-          </div>
+        <div class="container__start--input">
+          <p id="input--name" class="input--name"></p>
+          <img
+            src="./assets/img/dice.svg"
+            alt="dice"
+            id="input--dice"
+            class="input--dice"
+          />
         </div>
-        <div class="container__card--btns">
-          <button
-            class="container__cards--action"
-            id="decline-button"
-            data-action="decline"
-          >
-            Decline
-          </button>
-          <button
-            class="container__cards--action"
-            id="accept-button"
-            data-action="accept"
-          >
-            Accept
-          </button>
+        <div class="container__start--btn">
+          <button id="start" class="start">Play</button>
         </div>
       </div>
     </div>
