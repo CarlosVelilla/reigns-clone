@@ -113,14 +113,16 @@ function loadGame() {
             <button
               class="container__cards--action"
               id="decline-button"
+              data-cardid="card-1"
               data-action="decline"
-              data-toCard="card-2"
+              data-toCard="card-3"
             >
               Decline
             </button>
             <button
               class="container__cards--action"
               id="accept-button"
+              data-cardid="card-1"
               data-action="accept"
               data-toCard="card-2"
             >

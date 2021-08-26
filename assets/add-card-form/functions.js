@@ -59,9 +59,9 @@ FORM.addEventListener('submit', (event) => {
     headers: {"Content-type": "application/json"},
     body: JSON.stringify({
       id: `${formData.get('card-id')}-accept`,
-      religion: parseInt(formData.get('religion-accept')),
-      population: parseInt(formData.get('population-accept')),
-      army: parseInt(formData.get('army-accept')),
+      church: parseInt(formData.get('religion-accept')),
+      home: parseInt(formData.get('population-accept')),
+      power: parseInt(formData.get('army-accept')),
       money: parseInt(formData.get('money-accept')),
       magic: parseInt(formData.get('magic-accept')),
     })})
@@ -71,9 +71,9 @@ FORM.addEventListener('submit', (event) => {
     headers: {"Content-type": "application/json"},
     body: JSON.stringify({
       id: `${formData.get('card-id')}-decline`,
-      religion: parseInt(formData.get('religion-decline')),
-      population: parseInt(formData.get('population-decline')),
-      army: parseInt(formData.get('army-decline')),
+      church: parseInt(formData.get('religion-decline')),
+      home: parseInt(formData.get('population-decline')),
+      power: parseInt(formData.get('army-decline')),
       money: parseInt(formData.get('money-decline')),
       magic: parseInt(formData.get('magic-decline')),
     })})

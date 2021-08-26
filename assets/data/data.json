@@ -11,6 +11,10 @@
     {
       "id": "card-4",
       "parentCard": "card-2"
+    },
+    {
+      "id": "card-3",
+      "parentCard": "card-1"
     }
   ],
   "content": [
@@ -28,6 +32,11 @@
       "id": "card-4",
       "title": "Test title",
       "advice": "Test advice"
+    },
+    {
+      "id": "card-3",
+      "title": "Card 3 title",
+      "advice": "Card 3 advice"
     }
   ],
   "character": [
@@ -48,6 +57,12 @@
       "name": "Test character",
       "background": "",
       "url": "https://avatars.dicebear.com/api/avataaars/35.svg"
+    },
+    {
+      "id": "card-3",
+      "name": "Character card 3",
+      "background": "",
+      "url": "https://avatars.dicebear.com/api/avataaars/46.svg"
     }
   ],
   "accept": [
@@ -65,6 +80,11 @@
       "id": "card-4",
       "toCard": "card-6",
       "text": "Test accept text"
+    },
+    {
+      "id": "card-3",
+      "toCard": "card-8",
+      "text": "Accept text card 3"
     }
   ],
   "decline": [
@@ -82,56 +102,77 @@
       "id": "card-4",
       "toCard": "card-7",
       "text": "Test decline text"
+    },
+    {
+      "id": "card-3",
+      "toCard": "card-9",
+      "text": "Decline text card 3"
     }
   ],
   "modifiers": [
     {
-      "id": "card1-accept",
-      "religion": 0,
-      "population": 0,
-      "army": 0,
-      "money": 0,
+      "id": "card-1-accept",
+      "church": 2,
+      "home": 0,
+      "power": 0,
+      "money": 4,
       "magic": 0
     },
     {
-      "id": "card1-decline",
-      "religion": 0,
-      "population": 0,
-      "army": 0,
-      "money": 0,
-      "magic": 0
+      "id": "card-1-decline",
+      "church": 0,
+      "home": 2,
+      "power": 2,
+      "money": 4,
+      "magic": -3
     },
     {
       "id": "card-2-decline",
-      "religion": 1,
-      "population": 0,
-      "army": 0,
+      "church": 1,
+      "home": 0,
+      "power": 0,
       "money": 0,
       "magic": 0
     },
     {
       "id": "card-2-accept",
-      "religion": -3,
-      "population": 0,
-      "army": 0,
+      "church": -3,
+      "home": 0,
+      "power": 0,
       "money": 2,
       "magic": 0
     },
     {
       "id": "card-4-accept",
-      "religion": 2,
-      "population": -1,
-      "army": 0,
+      "church": 2,
+      "home": -1,
+      "power": 0,
       "money": -1,
       "magic": 0
     },
     {
       "id": "card-4-decline",
-      "religion": 0,
-      "population": 1,
-      "army": 0,
+      "church": 0,
+      "home": 1,
+      "power": 0,
       "money": 3,
       "magic": -1
+    },
+    {
+      "id": "card-3-accept",
+      "church": 0,
+      "home": 2,
+      "power": -2,
+      "money": 3,
+      "magic": -1
+    },
+    {
+      "id": "card-3-decline",
+      "church": 0,
+      "home": 2,
+      "power": 2,
+      "money": 4,
+      "magic": -3
     }
   ]
 }

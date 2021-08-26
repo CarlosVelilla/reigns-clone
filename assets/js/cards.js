@@ -13,13 +13,20 @@ function createCard(cardId) {
   const CHARACTERNAME = hiddencard.querySelector("[data-name]");
 
   /* ASSIGN NEXT CARD ID TO BUTTONS */
+  // TODO REFACTOR
   fetch(`${URL}/accept/${cardId}`)
     .then((response) => response.json())
-    .then((data) => ACCEPTBTN.setAttribute("data-tocard", data.toCard));
+    .then((data) => {
+      ACCEPTBTN.setAttribute("data-tocard", data.toCard)
+      ACCEPTBTN.setAttribute("data-cardid", cardId)
+    });
 
   fetch(`${URL}/decline/${cardId}`)
     .then((response) => response.json())
-    .then((data) => DECLINEBTN.setAttribute("data-tocard", data.toCard));
+    .then((data) => {
+      DECLINEBTN.setAttribute("data-tocard", data.toCard)
+      DECLINEBTN.setAttribute("data-cardid", cardId)
+    });
 
   /* PRINTING CARD TITLE AND ADVICE */
   fetch(`${URL}/content/${cardId}`)
@@ -40,7 +47,7 @@ function createCard(cardId) {
 }
 
 async function nextCard(event) {
-  /* TODO MODIFY FACTORS */
+  editFactors(event)
   createCard(event.target.dataset.tocard);
   toggleDataDisplayed()
   document.getElementById("flip-card--inner").classList.toggle("test")
@@ -53,17 +60,36 @@ function toggleDataDisplayed() {
   showedcard.dataset.displayed="false"
 }
 
-function editFactors(church, home, power, money, magic) {
-  // ? THINK ABOUT REFACTORING, QUERYSELECTORALL WITH A DATA ATT AND FOREACH THEN
+function editFactors(event) {
+  let cardId = event.target.dataset.cardid
+  let action = event.target.dataset.action
+  fetch(`${URL}/modifiers/${cardId}-${action}`)
+  .then((response) => response.json())
+  .then((data) => Object.keys(data).forEach(factor => {
+    if (factor != "id") {
+      editFactorClass(factor, parseInt(data[factor]))
+    }
+  }));
+}
 
-  /* LOCATING ELEMENTS IN DOM */
-  const churchElement = document.getElementById("icon-church");
-  const homeElement = document.getElementById("icon-home");
-  const powerElement = document.getElementById("icon-power");
-  const moneyElement = document.getElementById("icon-money");
-  const magicElement = document.getElementById("icon-magic");
+function editFactorClass(factor, points) {
+  let element = document.querySelector(`[data-icon="${factor}"]`)
+  let currentPoints = getCurrentPoints(factor)
+  element.classList.remove(`pa-${currentPoints}`)
+  element.classList.add(`pa-${points+currentPoints}`)
+}
 
-  // TODO WAIT TILL THERE'S AN EXAMPLE OF THE CSS
+function getCurrentPoints(factor) {
+  let element = document.querySelector(`[data-icon="${factor}"]`)
+  console.log(element);
+  let array = Array.from(element.classList)
+  let result = ""
+  array.forEach(element => {
+    if (element.includes("pa-")) {
+      result = element.slice(3)
+    }
+  })
+  return parseInt(result)
 }
 
 export { createCard, nextCard };
