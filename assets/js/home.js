@@ -1,5 +1,5 @@
 import { getRandomName } from "./names-functionality.js";
-import { nextCard } from "./cards.js"
+import { nextCard } from "./cards.js";
 
 //Variables
 const inputDice = document.getElementById("input--dice");
@@ -129,9 +129,34 @@ function loadGame() {
           </div>
         </div>`;
     mainContainer.classList.remove("disappear");
-    document.getElementById('decline-button').addEventListener('click', nextCard)
-    document.getElementById('accept-button').addEventListener('click', nextCard)
+    document
+      .getElementById("decline-button")
+      .addEventListener("click", nextCard);
+    document
+      .getElementById("accept-button")
+      .addEventListener("click", nextCard);
+    generateIcons();
   }, 500);
+}
+
+function generateIcons() {
+  const pointsIcon = document.querySelectorAll("[data-icon]");
+  let pointsValue = "pa-5";
+  pointsIcon.forEach((point) => {
+    point.classList.remove(
+      "pa-1",
+      "pa-2",
+      "pa-3",
+      "pa-4",
+      "pa-5",
+      "pa-6",
+      "pa-7",
+      "pa-8",
+      "pa-9",
+      "pa-10"
+    );
+    point.classList.add(pointsValue);
+  });
 }
 
 export { fillName };
