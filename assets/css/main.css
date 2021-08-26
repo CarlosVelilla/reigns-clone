@@ -70,7 +70,82 @@
 
 body {
   background-color: rgb(199, 206, 216);
+  background-image: url("../img/flat-01.jpg");
+  background-size: cover;
   width: 100wh;
+}
+
+.container {
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -ms-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  opacity: 1;
+}
+
+.container__start--logo {
+  position: fixed;
+  top: 10%;
+  left: 35%;
+  width: 30%;
+}
+
+.container__start--input {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 20%;
+  width: 20%;
+  left: 40%;
+}
+
+.input--name {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  position: relative;
+  border: solid 2px white;
+  background-color: white;
+  border-radius: 50px;
+  height: 36px;
+  width: 100%;
+}
+
+.input--dice {
+  position: absolute;
+  right: 0;
+  margin: 3px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.input--dice:hover {
+  transform: rotate(15deg);
+}
+
+.container__start--btn {
+  position: fixed;
+  bottom: 13%;
+  left: 40%;
+  width: 20%;
+}
+
+.start {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  height: 36px;
+  background-color: transparent;
+  border: solid 2px white;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.start:hover {
+  background-color: white;
+  color: black;
 }
 
 .container__card {
@@ -177,4 +252,8 @@ body {
 
 .card-back {
   transform: rotateY(180deg);
+}
+
+.disappear {
+  opacity: 0;
 }

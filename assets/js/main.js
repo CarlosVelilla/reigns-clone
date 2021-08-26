@@ -1,5 +1,5 @@
-import { createCard } from './cards.js'
-import { getRandomName } from './names-functionality.js'
+import { createCard } from "./cards.js";
+import { fillName } from "./home.js";
 
-createCard("card-1")
-getRandomName()
+createCard("card-1");
+fillName();
