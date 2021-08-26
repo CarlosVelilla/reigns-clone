@@ -68,41 +68,41 @@ function loadGame() {
           </div>
           <div class="flip-card">
             <div class="flip-card--inner">
-              <div class="container__card--info card-front">
+              <div class="container__card--info card-front" data-displayed="true">
                 <div class="container__card--pic">
                   <img
                     src="https://avatars.dicebear.com/api/avataaars/4.svg"
-                    alt=""
+                    alt="" data-image
                   />
                 </div>
-                <div class="container__card--character" id="character-name">
+                <div class="container__card--character" id="character-name" data-name>
                   Name
                 </div>
-                <div class="container__card--text" id="card-text">
+                <div class="container__card--text" id="card-text" data-text>
                   laborum quis ipsum ipsam incidunt voluptates doloribus illo
                   tempore?
                 </div>
-                <div class="container__card--advice" id="card-advice">
+                <div class="container__card--advice" id="card-advice" data-advice>
                   laborum quis ipsum ipsam incidunt voluptates doloribus illo
                   tempore?
                 </div>
               </div>
-              <div class="container__card--info card-back">
+              <div class="container__card--info card-back" data-displayed="false">
                 <div class="container__card--pic" id="character-container">
                   <img
                     src="https://avatars.dicebear.com/api/avataaars/5.svg"
                     alt="Character image"
-                    id="character-image"
+                    data-image
                   />
                 </div>
-                <div class="container__card--character" id="character-name">
+                <div class="container__card--character" data-name>
                   Name
                 </div>
-                <div class="container__card--text" id="card-text">
+                <div class="container__card--text" data-text>
                   laborum quis ipsum ipsam incidunt voluptates doloribus illo
                   tempore?
                 </div>
-                <div class="container__card--advice" id="card-advice">
+                <div class="container__card--advice" data-advice>
                   laborum quis ipsum ipsam incidunt voluptates doloribus illo
                   tempore?
                 </div>
