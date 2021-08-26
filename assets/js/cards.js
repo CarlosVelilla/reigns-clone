@@ -11,8 +11,6 @@ function createCard(cardId) {
   const ADVICE = hiddencard.querySelector("[data-advice]");
   const CHARACTERIMAGE = hiddencard.querySelector("[data-image]");
   const CHARACTERNAME = hiddencard.querySelector("[data-name]");
-  // ! REVISAR CUÁL ES EL CONTENEDOR CON BACKGROUND PARA EL PERSONAJE:
-  // const CHARACTERCONTAINER = hiddencard.querySelector("[data-]");
 
   /* ASSIGN NEXT CARD ID TO BUTTONS */
   fetch(`${URL}/accept/${cardId}`)
@@ -37,7 +35,7 @@ function createCard(cardId) {
     .then((data) => {
       CHARACTERIMAGE.src = data.url;
       CHARACTERNAME.textContent = data.name;
-      // CHARACTERCONTAINER.style.backgroundColor = data.background;
+      CHARACTERIMAGE.style.backgroundColor = data.background;
     });
 }
 
