@@ -1,0 +1,81 @@
+/* Typos */
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
+/* font-family: 'Gloria Hallelujah', cursive; ---- Logo */
+@import url("https://fonts.googleapis.com/css2?family=Schoolbell&display=swap");
+/* font-family: 'Schoolbell', cursive; ---- Kids */
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+/* font-family: 'Indie Flower', cursive; ---- General */
+
+:root {
+  --color-1: #f8b3b3;
+  --color-2: #aa3333;
+  --point-0: #acacac;
+  --point-1: linear-gradient(
+    0deg,
+    var(--color-2) 15%,
+    transparent 16%,
+    transparent 17%,
+    var(--color-1) 18%
+  );
+  --point-2: linear-gradient(
+    0deg,
+    var(--color-2) 23%,
+    transparent 24%,
+    transparent 25%,
+    var(--color-1) 26%
+  );
+  --point-3: linear-gradient(
+    0deg,
+    var(--color-2) 31%,
+    transparent 32%,
+    transparent 33%,
+    var(--color-1) 34%
+  );
+  --point-4: linear-gradient(
+    0deg,
+    var(--color-2) 39%,
+    transparent 40%,
+    transparent 41%,
+    var(--color-1) 42%
+  );
+  --point-5: linear-gradient(
+    0deg,
+    var(--color-2) 48%,
+    transparent 49%,
+    transparent 50%,
+    var(--color-1) 51%
+  );
+  --point-6: linear-gradient(
+    0deg,
+    var(--color-2) 56%,
+    transparent 57%,
+    transparent 58%,
+    var(--color-1) 59%
+  );
+  --point-7: linear-gradient(
+    0deg,
+    var(--color-2) 64%,
+    transparent 65%,
+    transparent 66%,
+    var(--color-1) 67%
+  );
+  --point-8: linear-gradient(
+    0deg,
+    var(--color-2) 72%,
+    transparent 73%,
+    transparent 74%,
+    var(--color-1) 75%
+  );
+  --point-9: linear-gradient(
+    0deg,
+    var(--color-2) 80%,
+    transparent 81%,
+    transparent 82%,
+    var(--color-1) 83%
+  );
+  --point-10: var(--color-2);
+
+  --font-logo: "Gloria Hallelujah", cursive;
+  --font-general: "Indie Flower", cursive;
+  --font-kids: "Schoolbell", cursive;
+}
