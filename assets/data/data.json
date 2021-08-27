@@ -68,111 +68,87 @@
   "accept": [
     {
       "id": "card-1",
-      "toCard": "card-2",
-      "text": "Accept text"
+      "toCard": "card-2"
     },
     {
       "id": "card-2",
-      "toCard": "card-4",
-      "text": "Accept text"
+      "toCard": "card-4"
     },
     {
       "id": "card-4",
-      "toCard": "card-6",
-      "text": "Test accept text"
+      "toCard": "card-6"
     },
     {
       "id": "card-3",
-      "toCard": "card-8",
-      "text": "Accept text card 3"
+      "toCard": "card-8"
     }
   ],
   "decline": [
     {
       "id": "card-1",
-      "toCard": "card-3",
-      "text": "Decline text"
+      "toCard": "card-3"
     },
     {
       "id": "card-2",
-      "toCard": "card-5",
-      "text": "Decline text"
+      "toCard": "card-5"
     },
     {
       "id": "card-4",
-      "toCard": "card-7",
-      "text": "Test decline text"
+      "toCard": "card-7"
     },
     {
       "id": "card-3",
-      "toCard": "card-9",
-      "text": "Decline text card 3"
+      "toCard": "card-9"
     }
   ],
   "modifiers": [
     {
       "id": "card-1-accept",
-      "church": 2,
-      "home": 0,
-      "power": 0,
-      "money": 4,
-      "magic": 0
+      "influence": 2,
+      "grades": 0,
+      "collection": 0
     },
     {
       "id": "card-1-decline",
-      "church": 0,
-      "home": 2,
-      "power": 2,
-      "money": 4,
-      "magic": -3
+      "influence": 0,
+      "grades": 2,
+      "collection": 2
     },
     {
       "id": "card-2-decline",
-      "church": 1,
-      "home": 0,
-      "power": 0,
-      "money": 0,
-      "magic": 0
+      "influence": 1,
+      "grades": 0,
+      "collection": 0
     },
     {
       "id": "card-2-accept",
-      "church": -3,
-      "home": 0,
-      "power": 0,
-      "money": 2,
-      "magic": 0
+      "influence": -3,
+      "grades": 0,
+      "collection": 0
     },
     {
       "id": "card-4-accept",
-      "church": 2,
-      "home": -1,
-      "power": 0,
-      "money": -1,
-      "magic": 0
+      "influence": 2,
+      "grades": -1,
+      "collection": 0
     },
     {
       "id": "card-4-decline",
-      "church": 0,
-      "home": 1,
-      "power": 0,
-      "money": 3,
-      "magic": -1
+      "influence": 0,
+      "grades": 1,
+      "collection": 0
     },
     {
       "id": "card-3-accept",
-      "church": 0,
-      "home": 2,
-      "power": -2,
-      "money": 3,
-      "magic": -1
+      "influence": 0,
+      "grades": 2,
+      "collection": -2
     },
     {
       "id": "card-3-decline",
-      "church": 0,
-      "home": 2,
-      "power": 2,
-      "money": 4,
-      "magic": -3
+      "influence": 0,
+      "grades": 2,
+      "collection": 2
     }
   ]
 }
