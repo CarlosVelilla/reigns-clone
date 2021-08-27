@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Highness</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="icon" href="./assets/img/favicon.svg" />
     <script type="module" src="/assets/js/main.js"></script>
   </head>
   <body>
     <div class="background"></div>
     <div id="container" class="container">
       <div id="container__start" class="container__start">
-        <div class="container__start--logo">
-          <img src="./assets/img/logo.png" alt="logo" />
-        </div>
+        <p class="container__start--logo">Your Highness</p>
         <div class="container__start--input">
           <p id="input--name" class="input--name"></p>
           <img
@@ -25,9 +24,13 @@
           />
         </div>
         <div class="container__start--btn">
-          <button id="start" class="start">Play</button>
+          <div id="start" class="start">
+            <p class="play--text">Play</p>
+            <span class="play--btn icon-play"></span>
+          </div>
         </div>
       </div>
+      <div id="credits" class="credits">Credits</div>
     </div>
   </body>
 </html>

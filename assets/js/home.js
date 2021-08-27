@@ -14,122 +14,131 @@ function fillName() {
   inputName.textContent = getRandomName();
 }
 
+const creditBtn = document.getElementById("credits");
+creditBtn.addEventListener("click", showModal);
+
+function showModal() {
+  const mainContainer = document.getElementById("container");
+  let generateModal = document.createElement("div");
+  generateModal.id = "credits-modal-container";
+  generateModal.innerHTML = `
+  <div id="credits-modal" class="credits__modal"></div>
+  <div class="credits__modal--window">
+    <div id="close-btn" class="close__btn">&#10799;</div>
+    <div class="credits__modal--text">
+        <h1 class="credits--title">Credits</h1>
+        <p class="credits--paraph">Carlos Velilla <a class="credits--link" href="https://github.com/CarlosVelilla" target="_blank">GitHub</a></p>
+        <p class="credits--paraph">Salvador Gómez <a class="credits--link" href="https://github.com/SalvaBandicoot" target="_blank">GitHub</a></p>
+        <hr>
+        <h1 class="credits--title">Resources</h1>
+        <p class="credits--paraph">Background SVG <a class="credits--link" href="https://www.svgbackgrounds.com/" target="_blank">SVG Backgrounds</a></p>
+        <p class="credits--paraph">Avatars <a class="credits--link" href="https://avatars.dicebear.com/styles/avataaars" target="_blank">DiceBear Avatars</a></p>
+        <p class="credits--paraph">Music <a class="credits--link" href="" target="_blank">Music</a></p>
+    </div>
+  </div>`;
+  mainContainer.appendChild(generateModal);
+  const modalWindow = document.getElementById("credits-modal");
+  modalWindow.classList.add("show__modal");
+
+  const modalBackground = document.getElementById("credits-modal");
+  modalBackground.addEventListener("click", closeModal);
+  const closeBtn = document.getElementById("close-btn");
+  closeBtn.addEventListener("click", closeModal);
+}
+
+function closeModal() {
+  let modalMainContainer = document.getElementById("credits-modal-container");
+  modalMainContainer.remove();
+}
+
 function loadGame() {
   const mainContainer = document.getElementById("container");
   mainContainer.classList.add("disappear");
   setTimeout(() => {
-    mainContainer.innerHTML = `
-    <div class="container__card">
-          <div class="container__card--values">
-            <div
-              class="
-                container__card--attr
-                icon-home
-                flex-center
-                point-amount
-              " data-icon="home"
-            ></div>
-            <div
-              class="
-                container__card--attr
-                icon-church
-                flex-center
-                point-amount
-              "
-              data-icon="church"
-            ></div>
-            <div
-              class="
-                container__card--attr
-                icon-power
-                flex-center
-                point-amount
-              "
-              data-icon="power"
-            ></div>
-            <div
-              class="
-                container__card--attr
-                icon-money
-                flex-center
-                point-amount
-              "
-              data-icon="money"
-            ></div>
-            <div
-              class="
-                container__card--attr
-                icon-magic
-                flex-center
-                point-amount
-              "
-              data-icon="magic"
-            ></div>
-          </div>
-          <div class="flip-card">
-            <div id="flip-card--inner" class="flip-card--inner">
-              <div class="container__card--info card-front" data-displayed="true">
-                <div class="container__card--pic">
-                  <img
-                    src="https://avatars.dicebear.com/api/avataaars/4.svg"
-                    alt="" data-image
-                  />
-                </div>
-                <div class="container__card--character" id="character-name" data-name>
-                  Name
-                </div>
-                <div class="container__card--text" id="card-text" data-text>
-                  laborum quis ipsum ipsam incidunt voluptates doloribus illo
-                  tempore?
-                </div>
-                <div class="container__card--advice" id="card-advice" data-advice>
-                  laborum quis ipsum ipsam incidunt voluptates doloribus illo
-                  tempore?
-                </div>
+    mainContainer.innerHTML = `<div class="container__card">
+    <div class="container__card--values">
+      <!-- Points -->
+      <div class="container__card--attr point-amount icon-influence" data-icon="influence">
+      </div>
+      <div class="container__card--attr point-amount icon-collection" data-icon="collection">
+      </div>
+      <div class="container__card--attr point-amount icon-grades" data-icon="grades">
+      </div>
+      <div>Points</div>
+      <div>===================</div>
+    </div>
+    <div>
+      <!-- Character -->
+      <div class="character--container">
+        <!-- Pic & Name -->
+        <div class="flip-card">
+          <div id="flip-card--inner" class="flip-card--inner">
+            <div class="container__card--pic card-front">
+              <img
+                class="character--img"
+                src="https://avatars.dicebear.com/api/avataaars/4.svg"
+                alt=""
+                data-image
+              />
+              <div
+                class="container__card--character"
+                id="character-name"
+                data-name
+              >
+                Carla
               </div>
-              <div class="container__card--info card-back" data-displayed="false">
-                <div class="container__card--pic" id="character-container">
-                  <img
-                    src="https://avatars.dicebear.com/api/avataaars/5.svg"
-                    alt="Character image"
-                    data-image
-                  />
-                </div>
-                <div class="container__card--character" data-name>
-                  Nametest
-                </div>
-                <div class="container__card--text" data-text>
-                  laborum quis ipsum ipsam incidunt voluptates doloribus illo
-                  tempore?
-                </div>
-                <div class="container__card--advice" data-advice>
-                  laborum quis ipsum ipsam incidunt voluptates doloribus illo
-                  tempore?
-                </div>
+            </div>
+            <div class="container__card--pic card-back">
+              <img
+                class="character--img"
+                src="https://avatars.dicebear.com/api/avataaars/5.svg"
+                alt=""
+                data-image
+              />
+              <div
+                class="container__card--character"
+                id="character-name"
+                data-name
+              >
+                Pepe
               </div>
             </div>
           </div>
-          <div class="container__card--btns">
-            <button
-              class="container__cards--action"
-              id="decline-button"
-              data-cardid="card-1"
-              data-action="decline"
-              data-toCard="card-3"
-            >
-              Decline
-            </button>
-            <button
-              class="container__cards--action"
-              id="accept-button"
-              data-cardid="card-1"
-              data-action="accept"
-              data-toCard="card-2"
-            >
-              Accept
-            </button>
-          </div>
-        </div>`;
+        </div>
+        <div class="container__card--text" id="card-text" data-text>
+        laborum quis ipsum ipsam incidunt voluptates doloribus illo tempore?
+        </div>
+      </div>
+    </div>
+    <div class="container--decission">
+      <div class="decission--advice">
+        laborum quis ipsum ipsam incidunt voluptates doloribus illo tempore?
+      </div>
+      <!-- Advice -->
+      <div class="container__card--btns">
+        <button
+          class="container__cards--action"
+          id="decline-button"
+          data-cardid="card-1"
+          data-action="decline"
+          data-toCard="card-3"
+        >
+          Decline
+        </button>
+        <button
+          class="container__cards--action"
+          id="accept-button"
+          data-cardid="card-1"
+          data-action="accept"
+          data-toCard="card-2"
+        >
+          Accept
+        </button>
+      </div>
+      <!-- Buttons -->
+    </div>
+  </div>
+   `;
     mainContainer.classList.remove("disappear");
     document
       .getElementById("decline-button")
