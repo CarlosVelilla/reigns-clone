@@ -9,60 +9,75 @@
       "parentCard": "card-1"
     },
     {
-      "id": "card-4",
+      "id": "card-3",
       "parentCard": "card-2"
     },
     {
-      "id": "card-3",
-      "parentCard": "card-1"
+      "id": "card-4",
+      "parentCard": "card-3"
+    },
+    {
+      "id": "card-5",
+      "parentCard": "card-4"
     }
   ],
   "content": [
     {
       "id": "card-1",
-      "title": "Title",
-      "advice": false
+      "text": "Welcome! You are our new student, aren't you? We are so glad to meet you. There are two sits, where do you prefer to sit?",
+      "advice": "Welcome to Your Highness, choose one of these options to continue"
     },
     {
       "id": "card-2",
-      "title": "Remove catholic church and get their money",
-      "advice": "You can't rule without church, but you can make them weaker"
-    },
-    {
-      "id": "card-4",
-      "title": "Test title",
-      "advice": "Test advice"
+      "text": "So you are the new kid. I'm Judy. My last sitting partner was the school's king, you know? You need to be sooo god to even compare yourself with him.",
+      "advice": false
     },
     {
       "id": "card-3",
-      "title": "Card 3 title",
-      "advice": "Card 3 advice"
+      "text": "Our ruler! He was the king of…. .... …. Almost First of His Name, The One Who Eated More Sandwiches in Jeremy's last birthday…",
+      "advice": false
+    },
+    {
+      "id": "card-4",
+      "text": "The thing is-- being the king (or queen) is SO awesome. Wait, are you smiling? You think you can get to be… our new ruler?",
+      "advice": false
+    },
+    {
+      "id": "card-5",
+      "text": "What?! This one? Don't even think about it, I'm going to be the next king! Do you hear me, kid?",
+      "advice": "Rocky"
     }
   ],
   "character": [
     {
       "id": "card-1",
-      "name": "Character",
-      "background": "#eee",
-      "url": "https://avatars.dicebear.com/api/avataaars/3.svg"
+      "name": "Prof. Raymond",
+      "background": "#fff",
+      "url": "https://avatars.dicebear.com/api/avataaars/1vyVF.svg?mouth=default"
     },
     {
       "id": "card-2",
-      "name": "Character",
+      "name": "Judy",
       "background": "#fff",
-      "url": "https://avatars.dicebear.com/api/avataaars/6.svg"
-    },
-    {
-      "id": "card-4",
-      "name": "Test character",
-      "background": "",
-      "url": "https://avatars.dicebear.com/api/avataaars/35.svg"
+      "url": "https://avatars.dicebear.com/api/avataaars/45.svg"
     },
     {
       "id": "card-3",
-      "name": "Character card 3",
-      "background": "",
-      "url": "https://avatars.dicebear.com/api/avataaars/46.svg"
+      "name": "Judy",
+      "background": "#fff",
+      "url": "https://avatars.dicebear.com/api/avataaars/84.svg"
+    },
+    {
+      "id": "card-4",
+      "name": "Judy",
+      "background": "#fff",
+      "url": "https://avatars.dicebear.com/api/avataaars/44.svg"
+    },
+    {
+      "id": "card-5",
+      "name": "#fff",
+      "background": "#fff",
+      "url": "https://avatars.dicebear.com/api/avataaars/kXmtz.svg?hairColor=auburn&eyes=default&eyebrow=angryNatural&mouth=concerned"
     }
   ],
   "accept": [
@@ -72,83 +87,83 @@
     },
     {
       "id": "card-2",
-      "toCard": "card-4"
+      "toCard": "card-3"
     },
     {
       "id": "card-4",
-      "toCard": "card-6"
+      "toCard": "card-5"
     },
     {
-      "id": "card-3",
-      "toCard": "card-8"
+      "id": "card-5",
+      "toCard": "card-6"
     }
   ],
   "decline": [
     {
       "id": "card-1",
-      "toCard": "card-3"
+      "toCard": "card-2"
     },
     {
       "id": "card-2",
-      "toCard": "card-5"
+      "toCard": "card-3"
     },
     {
       "id": "card-4",
-      "toCard": "card-7"
+      "toCard": "card-5"
     },
     {
-      "id": "card-3",
-      "toCard": "card-9"
+      "id": "card-5",
+      "toCard": "card-7"
     }
   ],
   "modifiers": [
     {
       "id": "card-1-accept",
-      "influence": 2,
+      "influence": 0,
       "grades": 0,
       "collection": 0
     },
     {
       "id": "card-1-decline",
       "influence": 0,
-      "grades": 2,
-      "collection": 2
-    },
-    {
-      "id": "card-2-decline",
-      "influence": 1,
       "grades": 0,
       "collection": 0
     },
     {
       "id": "card-2-accept",
-      "influence": -3,
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-2-decline",
+      "influence": 0,
       "grades": 0,
       "collection": 0
     },
     {
       "id": "card-4-accept",
-      "influence": 2,
-      "grades": -1,
+      "influence": 0,
+      "grades": 0,
       "collection": 0
     },
     {
       "id": "card-4-decline",
       "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-5-decline",
+      "influence": 0,
       "grades": 1,
       "collection": 0
     },
     {
-      "id": "card-3-accept",
-      "influence": 0,
-      "grades": 2,
-      "collection": -2
-    },
-    {
-      "id": "card-3-decline",
-      "influence": 0,
-      "grades": 2,
-      "collection": 2
+      "id": "card-5-accept",
+      "influence": -1,
+      "grades": 0,
+      "collection": 0
     }
   ]
 }

@@ -19,11 +19,11 @@
     <input type="text" id="card-parent" name="card-parent">
 
     <h2>Content</h2>
-    <label for="card-title">Title</label>
-    <input type="text" id="card-title" name="card-title">
+    <label for="card-text">Text</label>
+    <input type="text" id="card-text" name="card-text" size="120"><br><br>
 
     <label for="card-advice">Advice</label>
-    <input type="text" id="card-advice" name="card-advice">
+    <input type="text" id="card-advice" name="card-advice" size="120"><br><br>
 
     <h2>Character</h2>
     <label for="card-character-name">Character name</label>
@@ -39,6 +39,9 @@
     <label for="card-toCardAccept">Next card if accept</label>
     <input type="text" id="card-toCardAccept" name="card-toCardAccept">
 
+    <label for="card-textAccept">Accept text</label>
+    <input type="text" id="card-textAccept" name="card-textAccept" size="70">
+
     <h3>Modifiers if accept</h3>
       <label for="influence-accept">Influence</label>
       <input type="number" value="0" id="influence-accept" name="influence-accept">
@@ -53,6 +56,9 @@
     <label for="card-toCardDecline">Next card if decline</label>
     <input type="text" id="card-toCardDecline" name="card-toCardDecline">
 
+    <label for="card-textDecline">Decline text</label>
+    <input type="text" id="card-textDecline" name="card-textDecline" size="70">
+
     <h3>Modifiers if decline</h3>
       <label for="influence-decline">Influence</label>
       <input type="number" value="0" id="influence-decline" name="influence-decline">
@@ -63,7 +69,8 @@
       <label for="collection-decline">Collection</label>
       <input type="number" value="0" id="collection-decline" name="collection-decline">
 
-    <h2>Send</h2>
+    <br><br>
+    
     <input type="submit">
   </form>
 

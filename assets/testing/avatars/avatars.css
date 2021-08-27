@@ -1,3 +1,7 @@
+body {
+  background-color: midnightblue;
+}
+
 .app {
   display: flex;
   flex-wrap: wrap;
@@ -12,6 +16,15 @@
   flex-direction: column;
 }
 
-.text {
+.copy-button {
+  background-color: steelblue;
   text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+.text {
+  background-color: royalblue;
+  text-align: center;
+  color: white;
 }

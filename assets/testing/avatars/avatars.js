@@ -13,6 +13,7 @@ function createAvatars(num) {
     textElement.value = seed
     textElement.id = seed
     let buttonElement = document.createElement("button")
+    buttonElement.classList.add("copy-button")
     buttonElement.textContent = "Copy URL"
     buttonElement.setAttribute("onclick", `copyToClipboard("${seed}")`)
     container.appendChild(imgElement)

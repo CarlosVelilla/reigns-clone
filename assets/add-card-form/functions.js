@@ -4,7 +4,7 @@ const FORM = document.getElementById('addCardForm')
 FORM.addEventListener('submit', (event) => {
   event.preventDefault()
   let formData = new FormData(FORM)
-  let parentCardText = (formData.get('card-parent') == "") ? false : formData.get('card-parent')
+  let parentCard = (formData.get('card-parent') == "") ? false : formData.get('card-parent')
   let advice = (formData.get('card-advice') == "") ? false : formData.get('card-advice')
   let randomUrlImg = (formData.get('card-advice') == "") ? `https://avatars.dicebear.com/api/avataaars/${Math.ceil(Math.random()*100)}.svg` : formData.get('character-url')
 
@@ -13,7 +13,7 @@ FORM.addEventListener('submit', (event) => {
     headers: {"Content-type": "application/json"},
     body: JSON.stringify({
       id: formData.get('card-id'),
-      parentCard: parentCardText
+      parentCard: parentCard
     })})
 
   fetch(`${URL}/content`, {
@@ -21,7 +21,7 @@ FORM.addEventListener('submit', (event) => {
     headers: {"Content-type": "application/json"},
     body: JSON.stringify({
       id: formData.get('card-id'),
-      title: formData.get('card-title'),
+      text: formData.get('card-text'),
       advice: advice
     })})
 
