@@ -1,5 +1,5 @@
 import { getRandomName } from "./names-functionality.js";
-import { nextCard } from "./cards.js";
+import { createCard, nextCard } from "./cards.js";
 
 //Variables
 const inputDice = document.getElementById("input--dice");
@@ -136,6 +136,7 @@ function loadGame() {
     </div>
   </div>
    `;
+    createCard("card-1");
     mainContainer.classList.remove("disappear");
     document
       .getElementById("decline-button")
