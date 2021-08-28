@@ -111,27 +111,27 @@
     {
       "id": "card-1",
       "toCard": "card-2",
-      "text": ""
+      "text": "In the back"
     },
     {
       "id": "card-2",
       "toCard": "card-3",
-      "text": "In the back"
+      "text": "A king?"
     },
     {
       "id": "card-3",
       "toCard": "card-4",
-      "text": "A king?"
+      "text": "Err…"
     },
     {
       "id": "card-4",
       "toCard": "card-5",
-      "text": "Err…"
+      "text": "I don't know, maybe?"
     },
     {
       "id": "card-5",
       "toCard": "card-7",
-      "text": "I don't know, maybe?"
+      "text": "*You don't answer, and start paying attention to the class*"
     }
   ],
   "modifiers": [

@@ -120,7 +120,6 @@ function loadGame() {
           data-action="decline"
           data-toCard="card-3"
         >
-          Decline
         </button>
         <button
           class="container__cards--action"
@@ -129,14 +128,13 @@ function loadGame() {
           data-action="accept"
           data-toCard="card-2"
         >
-          Accept
         </button>
       </div>
       <!-- Buttons -->
     </div>
   </div>
    `;
-    createCard("card-1");
+    createCard("card-1", false);
     mainContainer.classList.remove("disappear");
     document
       .getElementById("decline-button")
