@@ -64,8 +64,8 @@ function loadGame() {
       </div>
       <div class="container__card--attr point-amount icon-grades" data-icon="grades">
       </div>
-      <div>Points</div>
-      <div>===================</div>
+      <div>P</div>
+      <div class="point-out"><div class="point-in"></div></div>
     </div>
     <div>
       <!-- Character -->

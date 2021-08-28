@@ -25,6 +25,7 @@ body {
 
 .container__start--logo {
   position: fixed;
+  text-align: center;
   font-family: var(--font-logo);
   color: white;
   font-size: 5rem;
@@ -186,6 +187,17 @@ body {
   height: 60%;
   width: 50%;
   padding: 5px;
+}
+
+.point-out {
+  width: 40%;
+  border: solid 1px var(--color-2);
+}
+
+.point-in {
+  width: 20%;
+  height: 100%;
+  background-color: var(--color-2);
 }
 
 .container__card--values {
