@@ -6,11 +6,11 @@ function createCard(cardId) {
   const DECLINEBTN = document.getElementById("decline-button");
 
   /* LOCATING ELEMENTS IN THE HIDDEN CARD SIDE */
-  //let hiddencard = document.querySelector("[data-displayed='false']");
+  let hiddencard = document.querySelector("[data-displayed='false']");
   const TEXT = document.querySelector("[data-text]");
   const ADVICE = document.querySelector("[data-advice]");
-  const CHARACTERIMAGE = document.querySelector("[data-image]");
-  const CHARACTERNAME = document.querySelector("[data-name]");
+  const CHARACTERIMAGE = hiddencard.querySelector("[data-image]");
+  const CHARACTERNAME = hiddencard.querySelector("[data-name]");
   /* ASSIGN NEXT CARD ID TO BUTTONS */
   // TODO REFACTOR
   fetch(`${URL}/accept/${cardId}`)
@@ -52,6 +52,7 @@ async function nextCard(event) {
   createCard(event.target.dataset.tocard);
   toggleDataDisplayed();
   document.getElementById("flip-card--inner").classList.toggle("rotate--plus");
+  console.log(event.target.dataset.cardid);
 }
 
 function toggleDataDisplayed() {

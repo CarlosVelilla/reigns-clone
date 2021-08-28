@@ -64,7 +64,7 @@ function loadGame() {
       </div>
       <div class="container__card--attr point-amount icon-grades" data-icon="grades">
       </div>
-      <div>P</div>
+      <div></div>
       <div class="point-out"><div class="point-in"></div></div>
     </div>
     <div>
@@ -76,7 +76,7 @@ function loadGame() {
             <div class="container__card--pic card-front" data-displayed='true'>
               <img
                 class="character--img"
-                src="https://avatars.dicebear.com/api/avataaars/4.svg"
+                src=""
                 alt=""
                 data-image
               />
@@ -85,7 +85,6 @@ function loadGame() {
                 id="character-name"
                 data-name
               >
-                Carla
               </div>
             </div>
             <div class="container__card--pic card-back" data-displayed='false'>
@@ -100,19 +99,17 @@ function loadGame() {
                 id="character-name"
                 data-name
               >
-                Pepe
+                
               </div>
             </div>
           </div>
         </div>
         <div class="container__card--text" id="card-text" data-text>
-        laborum quis ipsum ipsam incidunt voluptates doloribus illo tempore?
         </div>
       </div>
     </div>
     <div class="container--decission">
       <div class="decission--advice" data-advice>
-        laborum quis ipsum ipsam incidunt voluptates doloribus illo tempore?
       </div>
       <!-- Advice -->
       <div class="container__card--btns">

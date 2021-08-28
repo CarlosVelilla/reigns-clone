@@ -189,17 +189,6 @@ body {
   padding: 5px;
 }
 
-.point-out {
-  width: 40%;
-  border: solid 1px var(--color-2);
-}
-
-.point-in {
-  width: 20%;
-  height: 100%;
-  background-color: var(--color-2);
-}
-
 .container__card--values {
   background-color: white;
   border-radius: 40px 40px 0;
@@ -210,10 +199,23 @@ body {
 
 .container__card--attr {
   font-size: 32px;
-  width: 32px;
+  width: 15%;
   height: 32px;
 }
 
+.point-out {
+  width: 45%;
+  border: solid 2px var(--color-2);
+  border-radius: 25px;
+}
+
+.point-in {
+  width: 20%;
+  height: 100%;
+  border: solid 1px white;
+  border-radius: 30px 0 0 30px;
+  background-color: var(--color-2);
+}
 .character--container {
   background-color: white;
   padding: 20px;
