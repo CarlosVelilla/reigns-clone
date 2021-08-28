@@ -41,6 +41,7 @@ FORM.addEventListener('submit', (event) => {
     body: JSON.stringify({
       id: formData.get('card-id'),
       toCard: formData.get('card-toCardAccept'),
+      text: formData.get('card-textAccept')
     })})
 
   fetch(`${URL}/decline`, {
@@ -49,6 +50,7 @@ FORM.addEventListener('submit', (event) => {
     body: JSON.stringify({
       id: formData.get('card-id'),
       toCard: formData.get('card-toCardDecline'),
+      text: formData.get('card-textDecline')
     })})
     
   fetch(`${URL}/modifiers`, {

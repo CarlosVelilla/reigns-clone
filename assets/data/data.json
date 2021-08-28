@@ -83,45 +83,55 @@
   "accept": [
     {
       "id": "card-1",
-      "toCard": "card-2"
+      "toCard": "card-2",
+      "text": "In the front"
     },
     {
       "id": "card-2",
-      "toCard": "card-3"
+      "toCard": "card-3",
+      "text": "Who?"
     },
     {
       "id": "card-3",
-      "toCard": "card-4"
+      "toCard": "card-4",
+      "text": "*sighs*"
     },
     {
       "id": "card-4",
-      "toCard": "card-5"
+      "toCard": "card-5",
+      "text": "Sure!"
     },
     {
       "id": "card-5",
-      "toCard": "card-6"
+      "toCard": "card-6",
+      "text": "I'll do whatever I want, you bully"
     }
   ],
   "decline": [
     {
       "id": "card-1",
-      "toCard": "card-2"
+      "toCard": "card-2",
+      "text": ""
     },
     {
       "id": "card-2",
-      "toCard": "card-3"
+      "toCard": "card-3",
+      "text": "In the back"
     },
     {
       "id": "card-3",
-      "toCard": "card-4"
+      "toCard": "card-4",
+      "text": "A king?"
     },
     {
       "id": "card-4",
-      "toCard": "card-5"
+      "toCard": "card-5",
+      "text": "Err…"
     },
     {
       "id": "card-5",
-      "toCard": "card-7"
+      "toCard": "card-7",
+      "text": "I don't know, maybe?"
     }
   ],
   "modifiers": [
