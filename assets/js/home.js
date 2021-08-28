@@ -73,7 +73,7 @@ function loadGame() {
         <!-- Pic & Name -->
         <div class="flip-card">
           <div id="flip-card--inner" class="flip-card--inner">
-            <div class="container__card--pic card-front">
+            <div class="container__card--pic card-front" data-displayed='true'>
               <img
                 class="character--img"
                 src="https://avatars.dicebear.com/api/avataaars/4.svg"
@@ -88,10 +88,10 @@ function loadGame() {
                 Carla
               </div>
             </div>
-            <div class="container__card--pic card-back">
+            <div class="container__card--pic card-back" data-displayed='false'>
               <img
                 class="character--img"
-                src="https://avatars.dicebear.com/api/avataaars/5.svg"
+                src=""
                 alt=""
                 data-image
               />
@@ -111,7 +111,7 @@ function loadGame() {
       </div>
     </div>
     <div class="container--decission">
-      <div class="decission--advice">
+      <div class="decission--advice" data-advice>
         laborum quis ipsum ipsam incidunt voluptates doloribus illo tempore?
       </div>
       <!-- Advice -->
