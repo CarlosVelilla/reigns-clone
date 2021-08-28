@@ -39,5 +39,3 @@ function getRandomSeed(length) {
 }
 
 createAvatars(80)
-
-export { getRandomSeed }
