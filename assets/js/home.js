@@ -57,7 +57,7 @@ function showEditAvatar() {
   <div id="avatar-modal" class="avatar__modal"></div>
   <div class="avatar__modal--window">
     <div class="avatar__modal--selection">
-    <img id="image" class="image" src="" alt="">
+    <img id="image" class="avatar__image--edit" src="" alt="">
     <div id="options-container">
       <div id="topChance">Top</div>
       <div id="top">Top</div>
@@ -66,9 +66,6 @@ function showEditAvatar() {
       <div id="accessoriesChance">accessoriesChance</div>
       <div id="accessories">Accessories</div>
       <div id="accessoriesColor">AccessoriesColor</div>
-      <div id="facialHairChance">facialHairChance</div>
-      <div id="facialHair">FacialHair</div>
-      <div id="facialHairColor">FacialHairColor</div>
       <div id="clothes">Clothes</div>
       <div id="clothesColor">ClothesColor</div>
       <div id="eyes">Eyes</div>
@@ -114,9 +111,9 @@ let optionsArrays = {
   accessoriesChance: ["0", "100"],
   accessories: ["none", "kurt", "prescription01", "prescription02", "round", "sunglasses", "wayfarers"],
   accessoriesColor: ["none", "black", "blue", "blue01", "blue02", "blue03", "gray", "gray01", "gray02", "heather", "pastel", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
-  facialHairChance: ["0", "100"],
-  facialHair: ["none", "medium", "beardMedium", "light", "beardLight", "majestic", "beardMajestic", "fancy", "moustaceFancy", "magnum", "moustacheMagnum"],
-  facialHairColor: ["none", "auburn", "black", "blonde", "blondeGolden", "brown", "brownDark", "pastel", "pastelPink", "platinum", "red", "gray", "silverGray"],
+  //facialHairChance: ["0", "100"],
+  //facialHair: ["none", "medium", "beardMedium", "light", "beardLight", "majestic", "beardMajestic", "fancy", "moustaceFancy", "magnum", "moustacheMagnum"],
+  //facialHairColor: ["none", "auburn", "black", "blonde", "blondeGolden", "brown", "brownDark", "pastel", "pastelPink", "platinum", "red", "gray", "silverGray"],
   clothes: ["none", "blazer", "blazerAndShirt", "blazerAndSweater", "sweater", "collarAndSweater", "shirt", "graphicShirt", "shirtCrewNeck", "shirtScoopNeck", "shirtVNeck", "hoodie", "overall"],
   clothesColor: ["none", "black", "blue", "blue01", "blue02", "blue03", "gray", "gray01", "gray02", "heather", "pastel", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
   eyes: ["none", "close", "closed", "cry", "default", "dizzy", "xDizzy", "roll", "eyeRoll", "happy", "hearts", "side", "squint", "surprised", "wink", "winkWacky"],
@@ -136,7 +133,7 @@ function createModal() {
 function createButtons(position) {
   optionsArrays[position].forEach(option => {
     let button = document.createElement("button")
-    button.textContent = option
+    button.textContent = 1/*option*/
     button.setAttribute("data-option", position)
     button.setAttribute("data-value", option)
     button.classList.add("avatar--options")
