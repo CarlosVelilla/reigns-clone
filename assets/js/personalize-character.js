@@ -1,6 +1,6 @@
 // TODO HABLAR SI BOTÓN SAVE GUARDA A LOCAL STORAGE
 
-let seed = 'pepito' // TODO PENDING BRING SEED FROM PREVIOUS GENERAL SELECTION
+let seed = getRandomSeed(5)
 
 let options = {
   hatColor: "undefined",
@@ -18,6 +18,59 @@ let options = {
   clotheGraphics: "undefined",
 }
 
+let optionsArrays = {
+  topChance: ["0", "100"],
+  top: ["none", "longHair", "shortHair", "eyepatch", "hat", "hijab", "turban", "bigHair", "bob", "bun", "curly", "curvy", "dreads", "frida", "fro", "froAndBand", "miaWallace", "longButNotTooLong", "shavedSides", "straight01", "straight02", "straightAndStrand", "dreads01", "dreads02", "frizzle", "shaggy", "shaggyMullet", "shortCurly", "shortFlat", "shortRound", "shortWaved", "sides", "theCaesar", "theCaesarAndSidePart", "winterHat01", "winterHat02", "winterHat03", "winterHat04"],
+  hatColor: ["none", "black", "blue", "blue01", "blue02", "blue03", "gray", "gray01", "gray02", "heather", "pastel", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
+  hairColor: ["none", "auburn", "black", "blonde", "blondeGolden", "brown", "brownDark", "pastel", "pastelPink", "platinum", "red", "gray", "silverGray"],
+  accessoriesChance: ["0", "100"],
+  accessories: ["none", "kurt", "prescription01", "prescription02", "round", "sunglasses", "wayfarers"],
+  accessoriesColor: ["none", "black", "blue", "blue01", "blue02", "blue03", "gray", "gray01", "gray02", "heather", "pastel", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
+  facialHairChance: ["0", "100"],
+  facialHair: ["none", "medium", "beardMedium", "light", "beardLight", "majestic", "beardMajestic", "fancy", "moustaceFancy", "magnum", "moustacheMagnum"],
+  facialHairColor: ["none", "auburn", "black", "blonde", "blondeGolden", "brown", "brownDark", "pastel", "pastelPink", "platinum", "red", "gray", "silverGray"],
+  clothes: ["none", "blazer", "blazerAndShirt", "blazerAndSweater", "sweater", "collarAndSweater", "shirt", "graphicShirt", "shirtCrewNeck", "shirtScoopNeck", "shirtVNeck", "hoodie", "overall"],
+  clothesColor: ["none", "black", "blue", "blue01", "blue02", "blue03", "gray", "gray01", "gray02", "heather", "pastel", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
+  eyes: ["none", "close", "closed", "cry", "default", "dizzy", "xDizzy", "roll", "eyeRoll", "happy", "hearts", "side", "squint", "surprised", "wink", "winkWacky"],
+  eyebrow: ["none", "angry", "angryNatural", "default", "defaultNatural", "flat", "flatNatural", "raised", "raisedExcited", "raisedExcitedNatural", "sad", "sadConcerned", "sadConcernedNatural", "unibrow", "unibrowNatural", "up", "upDown", "upDownNatural", "frown", "frownNatural"],
+  mouth: ["none", "concerned", "default", "disbelief", "eating", "grimace", "sad", "scream", "screamOpen", "serious", "smile", "tongue", "twinkle", "vomit"],
+  skin: ["none", "tanned", "yellow", "pale", "light", "brown", "darkBrown", "black"],
+  clotheGraphics: ["none", "skullOutline", "skull", "resist", "pizza", "hola", "diamond", "deer", "cumbia", "bear", "bat"]
+}
+
+document.getElementById("options-container").addEventListener("click", changeUrl)
+
+function createModal() {
+  document.getElementById("image").src = `https://avatars.dicebear.com/api/avataaars/${seed}.svg?`
+  Object.keys(optionsArrays).forEach(position => createButtons(position))
+}
+
+function createButtons(position) {
+  optionsArrays[position].forEach(option => {
+    let button = document.createElement("button")
+    button.textContent = option
+    button.setAttribute("data-option", position)
+    button.setAttribute("data-value", option)
+    let parentElement = document.getElementById(`${position}`)
+    parentElement.appendChild(button)
+  })
+}
+
+function changeUrl(event) {
+  personalizeCharacter("set", event.target.dataset.option, event.target.dataset.value)
+  document.getElementById("image").src = personalizeCharacter("get")
+}
+
+function getRandomSeed(length) {
+  let result = '';
+  let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let charactersLength = characters.length;
+  for ( let i = 0; i < length; i++ ) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+}
+
 function personalizeCharacter(request, param, value) {
   if (request == "get") {
     let url = `https://avatars.dicebear.com/api/avataaars/${seed}.svg?`
@@ -27,10 +80,13 @@ function personalizeCharacter(request, param, value) {
         url += getOption(key)
       }
     })
-    console.log(url);
-    // return url
+    return url
   } else if (request == "set") {
-    options[param] = value
+    if (value == "none") {
+      options[param] = "undefined"
+    } else {
+      options[param] = value
+    }
   }
 }
 
@@ -38,42 +94,4 @@ function getOption(key) {
   return `${key}=${options[key]}&`
 }
 
-personalizeCharacter("set", "hatColor", "black")
-personalizeCharacter("get")
-
-
-
-
-
-
-
-
-
-
-
-// console.log(`https://avatars.dicebear.com/api/avataaars/${seed}.svg?hatColor=${options.hatColor}&hairColor=${options.hairColor}&accessories=${options.accessories}&accessoriesColor=${options.accessoriesColor}&facialHair=${options.facialHair}&facialHairColor=${options.facialHairColor}&clothes=${options.clothes}&clothesColor=${options.clothesColor}&eyes=${options.eyes}&eyebrow=${options.eyebrow}&mouth=${options.mouth}&skin=${options.skin}&clotheGraphics=${options.clotheGraphics}`)
-
-
-
-/* TEST */
-
-// let test12 = {
-//   atr1: "pepito",
-//   atr2: "fulanito"
-// }
-
-
-// function urlFunction(request, param, value) {
-//   if (request == "get") {
-//     console.log(`Hola ${test12.atr1}. Qué tal ${test12.atr2}`)
-//   } else if (request == "set") {
-//     test12[param] = value
-//     console.log(test12);
-//   }
-// }
-
-// console.log("request get: "+urlFunction("get"));
-// console.log("request set: "+urlFunction("set", "atr2", "juanito"));
-
-// urlFunction("set", "atr2", "juanito")
-// urlFunction("get")
+createModal()

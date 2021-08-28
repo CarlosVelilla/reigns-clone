@@ -1,5 +1,5 @@
 function createAvatars(num) {
-  for (i = 0; i <= num; i++) {
+  for (let i = 0; i <= num; i++) {
     let container = document.createElement("div")
     container.classList.add("container")
     let imgElement = document.createElement("img")
@@ -39,3 +39,5 @@ function getRandomSeed(length) {
 }
 
 createAvatars(80)
+
+export { getRandomSeed }
