@@ -46,6 +46,151 @@ function showModal() {
   closeBtn.addEventListener("click", closeModal);
 }
 
+const avatartBtn = document.getElementById("avatar-edit");
+avatartBtn.addEventListener("click", showEditAvatar);
+
+function showEditAvatar() {
+  const mainContainer = document.getElementById("container");
+  let generateModal = document.createElement("div");
+  generateModal.id = "avatar-modal-container";
+  generateModal.innerHTML = `
+  <div id="avatar-modal" class="avatar__modal"></div>
+  <div class="avatar__modal--window">
+    <div class="avatar__modal--selection">
+    <img id="image" class="image" src="" alt="">
+    <div id="options-container">
+      <div id="topChance">Top</div>
+      <div id="top">Top</div>
+      <div id="hatColor">HatColor</div>
+      <div id="hairColor">HairColor</div>
+      <div id="accessoriesChance">accessoriesChance</div>
+      <div id="accessories">Accessories</div>
+      <div id="accessoriesColor">AccessoriesColor</div>
+      <div id="facialHairChance">facialHairChance</div>
+      <div id="facialHair">FacialHair</div>
+      <div id="facialHairColor">FacialHairColor</div>
+      <div id="clothes">Clothes</div>
+      <div id="clothesColor">ClothesColor</div>
+      <div id="eyes">Eyes</div>
+      <div id="eyebrow">Eyebrow</div>
+      <div id="mouth">Mouth</div>
+      <div id="skin">Skin</div>
+      <div id="clotheGraphics">ClotheGraphics</div>
+    </div><button id="save-btn">Saave</button>
+    </div>
+  </div>`;
+  mainContainer.appendChild(generateModal);
+  const modalWindow = document.getElementById("avatar-modal");
+  modalWindow.classList.add("show__modal");
+
+  const saveBtn = document.getElementById("save-btn");
+  saveBtn.addEventListener("click", saveAvatar);
+
+  // TODO HABLAR SI BOTÓN SAVE GUARDA A LOCAL STORAGE
+
+let seed = getRandomSeed(5)
+
+let options = {
+  hatColor: "undefined",
+  hairColor: "undefined",
+  accessories: "undefined",
+  accessoriesColor: "undefined",
+  facialHair: "undefined",
+  facialHairColor: "undefined",
+  clothes: "undefined",
+  clothesColor: "undefined",
+  eyes: "undefined",
+  eyebrow: "undefined",
+  mouth: "undefined",
+  skin: "undefined",
+  clotheGraphics: "undefined",
+}
+
+let optionsArrays = {
+  topChance: ["0", "100"],
+  top: ["none", "longHair", "shortHair", "eyepatch", "hat", "hijab", "turban", "bigHair", "bob", "bun", "curly", "curvy", "dreads", "frida", "fro", "froAndBand", "miaWallace", "longButNotTooLong", "shavedSides", "straight01", "straight02", "straightAndStrand", "dreads01", "dreads02", "frizzle", "shaggy", "shaggyMullet", "shortCurly", "shortFlat", "shortRound", "shortWaved", "sides", "theCaesar", "theCaesarAndSidePart", "winterHat01", "winterHat02", "winterHat03", "winterHat04"],
+  hatColor: ["none", "black", "blue", "blue01", "blue02", "blue03", "gray", "gray01", "gray02", "heather", "pastel", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
+  hairColor: ["none", "auburn", "black", "blonde", "blondeGolden", "brown", "brownDark", "pastel", "pastelPink", "platinum", "red", "gray", "silverGray"],
+  accessoriesChance: ["0", "100"],
+  accessories: ["none", "kurt", "prescription01", "prescription02", "round", "sunglasses", "wayfarers"],
+  accessoriesColor: ["none", "black", "blue", "blue01", "blue02", "blue03", "gray", "gray01", "gray02", "heather", "pastel", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
+  facialHairChance: ["0", "100"],
+  facialHair: ["none", "medium", "beardMedium", "light", "beardLight", "majestic", "beardMajestic", "fancy", "moustaceFancy", "magnum", "moustacheMagnum"],
+  facialHairColor: ["none", "auburn", "black", "blonde", "blondeGolden", "brown", "brownDark", "pastel", "pastelPink", "platinum", "red", "gray", "silverGray"],
+  clothes: ["none", "blazer", "blazerAndShirt", "blazerAndSweater", "sweater", "collarAndSweater", "shirt", "graphicShirt", "shirtCrewNeck", "shirtScoopNeck", "shirtVNeck", "hoodie", "overall"],
+  clothesColor: ["none", "black", "blue", "blue01", "blue02", "blue03", "gray", "gray01", "gray02", "heather", "pastel", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
+  eyes: ["none", "close", "closed", "cry", "default", "dizzy", "xDizzy", "roll", "eyeRoll", "happy", "hearts", "side", "squint", "surprised", "wink", "winkWacky"],
+  eyebrow: ["none", "angry", "angryNatural", "default", "defaultNatural", "flat", "flatNatural", "raised", "raisedExcited", "raisedExcitedNatural", "sad", "sadConcerned", "sadConcernedNatural", "unibrow", "unibrowNatural", "up", "upDown", "upDownNatural", "frown", "frownNatural"],
+  mouth: ["none", "concerned", "default", "disbelief", "eating", "grimace", "sad", "scream", "screamOpen", "serious", "smile", "tongue", "twinkle", "vomit"],
+  skin: ["none", "tanned", "yellow", "pale", "light", "brown", "darkBrown", "black"],
+  clotheGraphics: ["none", "skullOutline", "skull", "resist", "pizza", "hola", "diamond", "deer", "cumbia", "bear", "bat"]
+}
+
+document.getElementById("options-container").addEventListener("click", changeUrl)
+
+function createModal() {
+  document.getElementById("image").src = `https://avatars.dicebear.com/api/avataaars/${seed}.svg?`
+  Object.keys(optionsArrays).forEach(position => createButtons(position))
+}
+
+function createButtons(position) {
+  optionsArrays[position].forEach(option => {
+    let button = document.createElement("button")
+    button.textContent = option
+    button.setAttribute("data-option", position)
+    button.setAttribute("data-value", option)
+    button.classList.add("avatar--options")
+    let parentElement = document.getElementById(`${position}`)
+    parentElement.appendChild(button)
+  })
+}
+
+function changeUrl(event) {
+  personalizeCharacter("set", event.target.dataset.option, event.target.dataset.value)
+  document.getElementById("image").src = personalizeCharacter("get")
+}
+
+function getRandomSeed(length) {
+  let result = '';
+  let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let charactersLength = characters.length;
+  for ( let i = 0; i < length; i++ ) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+}
+
+function personalizeCharacter(request, param, value) {
+  if (request == "get") {
+    let url = `https://avatars.dicebear.com/api/avataaars/${seed}.svg?`
+    Object.keys(options).forEach(key => {
+      let option = options[key]
+      if (option != "undefined") {
+        url += getOption(key)
+      }
+    })
+    return url
+  } else if (request == "set") {
+    if (value == "none") {
+      options[param] = "undefined"
+    } else {
+      options[param] = value
+    }
+  }
+}
+
+function getOption(key) {
+  return `${key}=${options[key]}&`
+}
+
+createModal()
+}
+function saveAvatar() {
+  let modalMainContainer = document.getElementById("avatar-modal-container");
+  //Save avatar
+  modalMainContainer.remove();
+}
+
 function closeModal() {
   let modalMainContainer = document.getElementById("credits-modal-container");
   modalMainContainer.remove();
@@ -65,7 +210,7 @@ function loadGame() {
       <div class="container__card--attr point-amount icon-grades" data-icon="grades">
       </div>
       <div></div>
-      <div class="point-out"><div class="point-in"></div></div>
+      <div class="point-out"><div id="progress-bar" class="point-in point-width"></div></div>
     </div>
     <div>
       <!-- Character -->
@@ -99,7 +244,6 @@ function loadGame() {
                 id="character-name"
                 data-name
               >
-                
               </div>
             </div>
           </div>
