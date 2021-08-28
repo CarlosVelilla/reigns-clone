@@ -45,7 +45,7 @@
     {
       "id": "card-5",
       "text": "What?! This one? Don't even think about it, I'm going to be the next king! Do you hear me, kid?",
-      "advice": "Rocky"
+      "advice": false
     }
   ],
   "character": [
@@ -75,7 +75,7 @@
     },
     {
       "id": "card-5",
-      "name": "#fff",
+      "name": "Rocky",
       "background": "#fff",
       "url": "https://avatars.dicebear.com/api/avataaars/kXmtz.svg?hairColor=auburn&eyes=default&eyebrow=angryNatural&mouth=concerned"
     }

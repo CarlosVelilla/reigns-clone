@@ -1,0 +1,7 @@
+NOTES
+
+Despite not being quite a good practice, for the shake of the exercise, we are going to write here some of the finally not used functions, variables, and text that we spent time working on but, as a result of the work itself, we improved. You may call us nostalgic, or maybe that, in this moment, letting our code go is somehow painful. We are THAT intense.
+
+
+A massive log for a complete URL for the avataaars API with all possibilites:
+console.log(`https://avatars.dicebear.com/api/avataaars/${seed}.svg?hatColor=${options.hatColor}&hairColor=${options.hairColor}&accessories=${options.accessories}&accessoriesColor=${options.accessoriesColor}&facialHair=${options.facialHair}&facialHairColor=${options.facialHairColor}&clothes=${options.clothes}&clothesColor=${options.clothesColor}&eyes=${options.eyes}&eyebrow=${options.eyebrow}&mouth=${options.mouth}&skin=${options.skin}&clotheGraphics=${options.clotheGraphics}`)
