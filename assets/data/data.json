@@ -90,6 +90,10 @@
       "toCard": "card-3"
     },
     {
+      "id": "card-3",
+      "toCard": "card-4"
+    },
+    {
       "id": "card-4",
       "toCard": "card-5"
     },
@@ -106,6 +110,10 @@
     {
       "id": "card-2",
       "toCard": "card-3"
+    },
+    {
+      "id": "card-3",
+      "toCard": "card-4"
     },
     {
       "id": "card-4",
