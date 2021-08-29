@@ -9,6 +9,10 @@
 :root {
   --color-1: #f8b3b3;
   --color-2: #aa3333;
+  --color-3: #FF6666;
+  --color-4: #E64545;
+  --color-5: #0F9936;
+  --color-6: #45E672;
   --point-0: #acacac;
   --point-1: linear-gradient(
     0deg,
