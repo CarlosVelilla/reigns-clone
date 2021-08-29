@@ -58,9 +58,9 @@ function showModal() {
       <p class="credits--paraph">Salvador Gómez <a class="credits--link" href="https://github.com/SalvaBandicoot" target="_blank">GitHub</a></p>
       <hr>
       <h1 class="credits--title">Resources</h1>
-      <p class="credits--paraph">Background SVG <a class="credits--link" href="https://www.svgbackgrounds.com/" target="_blank">SVG Backgrounds</a></p>
+      <p class="credits--paraph">Background <a class="credits--link" href="https://www.svgbackgrounds.com/" target="_blank">SVG Backgrounds</a></p>
       <p class="credits--paraph">Avatars <a class="credits--link" href="https://avatars.dicebear.com/styles/avataaars" target="_blank">DiceBear Avatars</a></p>
-      <p class="credits--paraph">Music <a class="credits--link" href="" target="_blank">Music</a></p>
+      <p class="credits--paraph">Music <a class="credits--link" href="https://soundimage.org/looping-music/" target="_blank">Soundimage</a></p>
     </div>
   </div>
   `;
