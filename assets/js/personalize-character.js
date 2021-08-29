@@ -1,4 +1,91 @@
-// TODO HABLAR SI BOTÓN SAVE GUARDA A LOCAL STORAGE
+function showEditAvatar() {
+  const mainContainer = document.getElementById("container");
+  let generateModal = document.createElement("div");
+  generateModal.id = "avatar-modal-container";
+  generateModal.innerHTML = `
+  <div id="avatar-modal" class="avatar__modal"></div>
+  <div class="avatar__modal--window">
+    <div class="avatar__modal--selection">
+      <div class="avatar__modal--preview">
+        <img id="image" class="avatar__image--edit" src="" alt="">
+        <p id="input--name" class="avatar__name">Jessie XVI, the squalid</p>
+        <button id="save-btn" class="save-btn">Save</button>
+      </div>
+      <div id="options-container" class="options-container">
+      <h2 class="a-tittle">Personalize your character</h2>
+        <div class="accordion">
+          <div class="a-container">
+              <p class="a-btn">Show top element?</p>
+              <div id="topChance" class="a-panel"></div>
+          </div>
+          <div class="a-container">
+              <p class="a-btn">Top</p>
+              <div id="top" class="a-panel"></div>
+          </div>
+          <div class="a-container">
+              <p class="a-btn">Hat Color</p>
+              <div id="hatColor" class="a-panel"></div>
+          </div>
+          <div class="a-container">
+              <p class="a-btn">Hair color</p>
+              <div id="hairColor" class="a-panel"></div>
+          </div>
+          <div class="a-container">
+              <p class="a-btn">Show accessories?</p>
+              <div id="accessoriesChance" class="a-panel"></div>
+          </div>
+          <div class="a-container">
+              <p class="a-btn">Accessories</p>
+              <div id="accessories" class="a-panel"></div>
+          </div>
+          <div class="a-container">
+              <p class="a-btn">AccessoriesColor</p>
+              <div id="accessoriesColor" class="a-panel"></div>
+          </div>
+          <div class="a-container">
+              <p class="a-btn">Clothes</p>
+              <div id="clothes" class="a-panel"></div>
+          </div>
+          <div class="a-container">
+              <p class="a-btn">Clothes color</p>
+              <div id="clothesColor" class="a-panel"></div>
+          </div>
+          <div class="a-container">
+              <p class="a-btn">Eyes</p>
+              <div id="eyes" class="a-panel"></div>
+          </div>
+          <div class="a-container">
+              <p class="a-btn">Eyebrows</p>
+              <div id="eyebrow" class="a-panel"></div>
+          </div>
+          <div class="a-container">
+              <p class="a-btn">Mouth</p>
+              <div id="mouth" class="a-panel"></div>
+          </div>
+          <div class="a-container">
+              <p class="a-btn">Skin</p>
+              <div id="skin" class="a-panel"></div>
+          </div>
+          <div class="a-container">
+              <p class="a-btn">Clothe graphics</p>
+              <div id="clotheGraphics" class="a-panel"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>`;
+
+  
+
+
+  mainContainer.appendChild(generateModal);
+  const modalWindow = document.getElementById("avatar-modal");
+  modalWindow.classList.add("show__modal");
+
+  const saveBtn = document.getElementById("save-btn");
+  saveBtn.addEventListener("click", saveAvatar);
+
+  // TODO HABLAR SI BOTÓN SAVE GUARDA A LOCAL STORAGE
 
 let seed = getRandomSeed(5)
 
@@ -7,8 +94,6 @@ let options = {
   hairColor: "undefined",
   accessories: "undefined",
   accessoriesColor: "undefined",
-  facialHair: "undefined",
-  facialHairColor: "undefined",
   clothes: "undefined",
   clothesColor: "undefined",
   eyes: "undefined",
@@ -26,9 +111,6 @@ let optionsArrays = {
   accessoriesChance: ["0", "100"],
   accessories: ["none", "kurt", "prescription01", "prescription02", "round", "sunglasses", "wayfarers"],
   accessoriesColor: ["none", "black", "blue", "blue01", "blue02", "blue03", "gray", "gray01", "gray02", "heather", "pastel", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
-  facialHairChance: ["0", "100"],
-  facialHair: ["none", "medium", "beardMedium", "light", "beardLight", "majestic", "beardMajestic", "fancy", "moustaceFancy", "magnum", "moustacheMagnum"],
-  facialHairColor: ["none", "auburn", "black", "blonde", "blondeGolden", "brown", "brownDark", "pastel", "pastelPink", "platinum", "red", "gray", "silverGray"],
   clothes: ["none", "blazer", "blazerAndShirt", "blazerAndSweater", "sweater", "collarAndSweater", "shirt", "graphicShirt", "shirtCrewNeck", "shirtScoopNeck", "shirtVNeck", "hoodie", "overall"],
   clothesColor: ["none", "black", "blue", "blue01", "blue02", "blue03", "gray", "gray01", "gray02", "heather", "pastel", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
   eyes: ["none", "close", "closed", "cry", "default", "dizzy", "xDizzy", "roll", "eyeRoll", "happy", "hearts", "side", "squint", "surprised", "wink", "winkWacky"],
@@ -48,9 +130,14 @@ function createModal() {
 function createButtons(position) {
   optionsArrays[position].forEach(option => {
     let button = document.createElement("button")
-    button.textContent = option
+    if (optionsArrays[position].indexOf(option) == 0) {
+      button.innerHTML = "&#128711;"
+    } else if ((position == "topChance" || position == "accessoriesChance") && optionsArrays[position].indexOf(option) == 1 ) {
+      button.innerHTML = "&#10003;"
+    } else button.textContent = optionsArrays[position].indexOf(option)
     button.setAttribute("data-option", position)
     button.setAttribute("data-value", option)
+    button.classList.add("avatar--options")
     let parentElement = document.getElementById(`${position}`)
     parentElement.appendChild(button)
   })
@@ -93,5 +180,13 @@ function personalizeCharacter(request, param, value) {
 function getOption(key) {
   return `${key}=${options[key]}&`
 }
-
 createModal()
+}
+
+function saveAvatar() {
+  let modalMainContainer = document.getElementById("avatar-modal-container");
+  //Save avatar
+  modalMainContainer.remove();
+}
+
+export {showEditAvatar};
