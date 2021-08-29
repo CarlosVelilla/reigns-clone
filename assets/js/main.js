@@ -1,6 +1,7 @@
-import { fillName } from "./home.js";
+import { fillName, getRandomCharacter } from "./home.js";
 
 fillName();
+getRandomCharacter()
 
 //! To move
 function upgradeBar(points) {

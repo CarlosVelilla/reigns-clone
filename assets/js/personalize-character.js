@@ -148,6 +148,18 @@ function changeUrl(event) {
   document.getElementById("image").src = personalizeCharacter("get")
 }
 
+function getOption(key) {
+  return `${key}=${options[key]}&`
+}
+createModal()
+}
+
+function saveAvatar() {
+  let modalMainContainer = document.getElementById("avatar-modal-container");
+  //Save avatar
+  modalMainContainer.remove();
+}
+
 function getRandomSeed(length) {
   let result = '';
   let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -177,16 +189,4 @@ function personalizeCharacter(request, param, value) {
   }
 }
 
-function getOption(key) {
-  return `${key}=${options[key]}&`
-}
-createModal()
-}
-
-function saveAvatar() {
-  let modalMainContainer = document.getElementById("avatar-modal-container");
-  //Save avatar
-  modalMainContainer.remove();
-}
-
-export {showEditAvatar};
+export {showEditAvatar, getRandomSeed};

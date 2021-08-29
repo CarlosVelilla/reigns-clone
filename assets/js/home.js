@@ -1,14 +1,21 @@
 import { getRandomName } from "./names-functionality.js";
 import { createCard, nextCard } from "./cards.js";
-import { showEditAvatar } from "./personalize-character.js";
+import { showEditAvatar, getRandomSeed } from "./personalize-character.js";
 
 //Variables
 const inputDice = document.getElementById("input--dice");
 const playBtn = document.getElementById("start");
+const randomAvatarBtn = document.getElementById("avatar-random")
 
 //Event Listeners
 inputDice.addEventListener("click", fillName);
 playBtn.addEventListener("click", loadGame);
+randomAvatarBtn.addEventListener("click", getRandomCharacter)
+
+function getRandomCharacter() {
+  let randomSeed = getRandomSeed(5)
+  document.getElementById("avatarHome").src = `https://avatars.dicebear.com/api/avataaars/${randomSeed}.svg?`
+}
 
 function fillName() {
   const inputName = document.getElementById("input--name");
@@ -169,4 +176,4 @@ function generateIcons() {
   });
 }
 
-export { fillName };
+export { fillName, getRandomCharacter };
