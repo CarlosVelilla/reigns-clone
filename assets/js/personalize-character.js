@@ -1,3 +1,44 @@
+import { getRandomSeed, seed, userName } from "./home.js";
+
+/* VARIABLES AND DATA */
+
+let urlCharacter = "";
+
+let options = {
+  hatColor: "undefined",
+  hairColor: "undefined",
+  accessories: "undefined",
+  accessoriesColor: "undefined",
+  clothes: "undefined",
+  clothesColor: "undefined",
+  eyes: "undefined",
+  eyebrow: "undefined",
+  mouth: "undefined",
+  skin: "undefined",
+  clotheGraphics: "undefined",
+}
+
+let optionsArrays = {
+  topChance: ["0", "100"],
+  top: ["none", "longHair", "shortHair", "eyepatch", "hat", "hijab", "turban", "bigHair", "bob", "bun", "curly", "curvy", "dreads", "frida", "fro", "froAndBand", "miaWallace", "longButNotTooLong", "shavedSides", "straight01", "straight02", "straightAndStrand", "dreads01", "dreads02", "frizzle", "shaggy", "shaggyMullet", "shortCurly", "shortFlat", "shortRound", "shortWaved", "sides", "theCaesar", "theCaesarAndSidePart", "winterHat01", "winterHat02", "winterHat03", "winterHat04"],
+  hatColor: ["none", "black", "blue", "blue01", "blue02", "blue03", "gray", "gray01", "gray02", "heather", "pastel", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
+  hairColor: ["none", "auburn", "black", "blonde", "blondeGolden", "brown", "brownDark", "pastel", "pastelPink", "platinum", "red", "gray", "silverGray"],
+  accessoriesChance: ["0", "100"],
+  accessories: ["none", "kurt", "prescription01", "prescription02", "round", "sunglasses", "wayfarers"],
+  accessoriesColor: ["none", "black", "blue", "blue01", "blue02", "blue03", "gray", "gray01", "gray02", "heather", "pastel", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
+  clothes: ["none", "blazer", "blazerAndShirt", "blazerAndSweater", "sweater", "collarAndSweater", "shirt", "graphicShirt", "shirtCrewNeck", "shirtScoopNeck", "shirtVNeck", "hoodie", "overall"],
+  clothesColor: ["none", "black", "blue", "blue01", "blue02", "blue03", "gray", "gray01", "gray02", "heather", "pastel", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
+  eyes: ["none", "close", "closed", "cry", "default", "dizzy", "xDizzy", "roll", "eyeRoll", "happy", "hearts", "side", "squint", "surprised", "wink", "winkWacky"],
+  eyebrow: ["none", "angry", "angryNatural", "default", "defaultNatural", "flat", "flatNatural", "raised", "raisedExcited", "raisedExcitedNatural", "sad", "sadConcerned", "sadConcernedNatural", "unibrow", "unibrowNatural", "up", "upDown", "upDownNatural", "frown", "frownNatural"],
+  mouth: ["none", "concerned", "default", "disbelief", "eating", "grimace", "sad", "scream", "screamOpen", "serious", "smile", "tongue", "twinkle", "vomit"],
+  skin: ["none", "tanned", "yellow", "pale", "light", "brown", "darkBrown", "black"],
+  clotheGraphics: ["none", "skullOutline", "skull", "resist", "pizza", "hola", "diamond", "deer", "cumbia", "bear", "bat"]
+}
+
+/* FUNCTIONALITIES */
+
+/* MODAL EDIT AVATAR */
+
 function showEditAvatar() {
   const mainContainer = document.getElementById("container");
   let generateModal = document.createElement("div");
@@ -8,7 +49,7 @@ function showEditAvatar() {
     <div class="avatar__modal--selection">
       <div class="avatar__modal--preview">
         <img id="image" class="avatar__image--edit" src="" alt="">
-        <p id="input--name" class="avatar__name">Jessie XVI, the squalid</p>
+        <p id="avatar--name" class="avatar__name">Jessie XVI, the squalid</p>
         <button id="save-btn" class="save-btn">Save</button>
       </div>
       <div id="options-container" class="options-container">
@@ -75,9 +116,6 @@ function showEditAvatar() {
     </div>
   </div>`;
 
-  
-
-
   mainContainer.appendChild(generateModal);
   const modalWindow = document.getElementById("avatar-modal");
   modalWindow.classList.add("show__modal");
@@ -85,45 +123,18 @@ function showEditAvatar() {
   const saveBtn = document.getElementById("save-btn");
   saveBtn.addEventListener("click", saveAvatar);
 
-  // TODO HABLAR SI BOTÓN SAVE GUARDA A LOCAL STORAGE
+  document.getElementById("options-container").addEventListener("click", changeUrl)
 
-let seed = getRandomSeed(5)
-
-let options = {
-  hatColor: "undefined",
-  hairColor: "undefined",
-  accessories: "undefined",
-  accessoriesColor: "undefined",
-  clothes: "undefined",
-  clothesColor: "undefined",
-  eyes: "undefined",
-  eyebrow: "undefined",
-  mouth: "undefined",
-  skin: "undefined",
-  clotheGraphics: "undefined",
+  createModal()
 }
-
-let optionsArrays = {
-  topChance: ["0", "100"],
-  top: ["none", "longHair", "shortHair", "eyepatch", "hat", "hijab", "turban", "bigHair", "bob", "bun", "curly", "curvy", "dreads", "frida", "fro", "froAndBand", "miaWallace", "longButNotTooLong", "shavedSides", "straight01", "straight02", "straightAndStrand", "dreads01", "dreads02", "frizzle", "shaggy", "shaggyMullet", "shortCurly", "shortFlat", "shortRound", "shortWaved", "sides", "theCaesar", "theCaesarAndSidePart", "winterHat01", "winterHat02", "winterHat03", "winterHat04"],
-  hatColor: ["none", "black", "blue", "blue01", "blue02", "blue03", "gray", "gray01", "gray02", "heather", "pastel", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
-  hairColor: ["none", "auburn", "black", "blonde", "blondeGolden", "brown", "brownDark", "pastel", "pastelPink", "platinum", "red", "gray", "silverGray"],
-  accessoriesChance: ["0", "100"],
-  accessories: ["none", "kurt", "prescription01", "prescription02", "round", "sunglasses", "wayfarers"],
-  accessoriesColor: ["none", "black", "blue", "blue01", "blue02", "blue03", "gray", "gray01", "gray02", "heather", "pastel", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
-  clothes: ["none", "blazer", "blazerAndShirt", "blazerAndSweater", "sweater", "collarAndSweater", "shirt", "graphicShirt", "shirtCrewNeck", "shirtScoopNeck", "shirtVNeck", "hoodie", "overall"],
-  clothesColor: ["none", "black", "blue", "blue01", "blue02", "blue03", "gray", "gray01", "gray02", "heather", "pastel", "pastelBlue", "pastelGreen", "pastelOrange", "pastelRed", "pastelYellow", "pink", "red", "white"],
-  eyes: ["none", "close", "closed", "cry", "default", "dizzy", "xDizzy", "roll", "eyeRoll", "happy", "hearts", "side", "squint", "surprised", "wink", "winkWacky"],
-  eyebrow: ["none", "angry", "angryNatural", "default", "defaultNatural", "flat", "flatNatural", "raised", "raisedExcited", "raisedExcitedNatural", "sad", "sadConcerned", "sadConcernedNatural", "unibrow", "unibrowNatural", "up", "upDown", "upDownNatural", "frown", "frownNatural"],
-  mouth: ["none", "concerned", "default", "disbelief", "eating", "grimace", "sad", "scream", "screamOpen", "serious", "smile", "tongue", "twinkle", "vomit"],
-  skin: ["none", "tanned", "yellow", "pale", "light", "brown", "darkBrown", "black"],
-  clotheGraphics: ["none", "skullOutline", "skull", "resist", "pizza", "hola", "diamond", "deer", "cumbia", "bear", "bat"]
-}
-
-document.getElementById("options-container").addEventListener("click", changeUrl)
 
 function createModal() {
-  document.getElementById("image").src = `https://avatars.dicebear.com/api/avataaars/${seed}.svg?`
+  if (urlCharacter == "") {
+    document.getElementById("image").src = `https://avatars.dicebear.com/api/avataaars/${seed}.svg?`
+  } else {
+    document.getElementById("image").src = urlCharacter
+  }
+  document.getElementById("avatar--name").textContent = userName
   Object.keys(optionsArrays).forEach(position => createButtons(position))
 }
 
@@ -148,27 +159,19 @@ function changeUrl(event) {
   document.getElementById("image").src = personalizeCharacter("get")
 }
 
-function getOption(key) {
-  return `${key}=${options[key]}&`
-}
-createModal()
+function cleanUrl() {
+  urlCharacter = ""
 }
 
 function saveAvatar() {
   let modalMainContainer = document.getElementById("avatar-modal-container");
-  //Save avatar
+  let newUrlCharacter = document.getElementById("image").src
+  urlCharacter = newUrlCharacter
+  document.getElementById("avatarHome").src = newUrlCharacter
   modalMainContainer.remove();
 }
 
-function getRandomSeed(length) {
-  let result = '';
-  let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  let charactersLength = characters.length;
-  for ( let i = 0; i < length; i++ ) {
-    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-  }
-  return result;
-}
+/* OTHER FUNCTIONALITIES */
 
 function personalizeCharacter(request, param, value) {
   if (request == "get") {
@@ -189,4 +192,8 @@ function personalizeCharacter(request, param, value) {
   }
 }
 
-export {showEditAvatar, getRandomSeed};
+function getOption(key) {
+  return `${key}=${options[key]}&`
+}
+
+export {showEditAvatar, getRandomSeed, urlCharacter, cleanUrl};
