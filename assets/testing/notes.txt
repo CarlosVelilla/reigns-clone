@@ -5,3 +5,16 @@ Despite not being quite a good practice, for the shake of the exercise, we are g
 
 A massive log for a complete URL for the avataaars API with all possibilites:
 console.log(`https://avatars.dicebear.com/api/avataaars/${seed}.svg?hatColor=${options.hatColor}&hairColor=${options.hairColor}&accessories=${options.accessories}&accessoriesColor=${options.accessoriesColor}&facialHair=${options.facialHair}&facialHairColor=${options.facialHairColor}&clothes=${options.clothes}&clothesColor=${options.clothesColor}&eyes=${options.eyes}&eyebrow=${options.eyebrow}&mouth=${options.mouth}&skin=${options.skin}&clotheGraphics=${options.clotheGraphics}`)
+
+
+function getCurrentPoints(factor) {
+  let element = document.querySelector(`[data-icon="${factor}"]`)
+  let array = Array.from(element.classList)
+  let result = ""
+  array.forEach(element => {
+    if (element.includes("pa-")) {
+      result = element.slice(3)
+    }
+  })
+  return parseInt(result)
+}

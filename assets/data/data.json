@@ -159,6 +159,19 @@
       "grades": 0,
       "collection": 0
     },
+    
+    {
+      "id": "card-3-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-3-decline",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
     {
       "id": "card-4-accept",
       "influence": 0,

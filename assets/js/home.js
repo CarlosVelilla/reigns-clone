@@ -195,6 +195,7 @@ function generateIcons() {
       "pa-10"
     );
     point.classList.add(pointsValue);
+    point.setAttribute("data-points", 5)
   });
 }
 

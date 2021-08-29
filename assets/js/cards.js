@@ -71,6 +71,8 @@ function toggleDataDisplayed() {
   showedcard.dataset.displayed="false"
 }
 
+
+
 function editFactors(event) {
   let cardId = event.target.dataset.cardid
   let action = event.target.dataset.action
@@ -88,17 +90,12 @@ function editFactorClass(factor, points) {
   let currentPoints = getCurrentPoints(factor)
   element.classList.remove(`pa-${currentPoints}`)
   element.classList.add(`pa-${points+currentPoints}`)
+  element.dataset.points = points+currentPoints
 }
 
 function getCurrentPoints(factor) {
   let element = document.querySelector(`[data-icon="${factor}"]`)
-  let array = Array.from(element.classList)
-  let result = ""
-  array.forEach(element => {
-    if (element.includes("pa-")) {
-      result = element.slice(3)
-    }
-  })
+  let result = element.dataset.points
   return parseInt(result)
 }
 
