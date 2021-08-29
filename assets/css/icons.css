@@ -1,19 +1,18 @@
 @font-face {
-  font-family: "icomoon";
-  src: url("../icons/icomoon.eot?qycr0u");
-  src: url("../icons/icomoon.eot?qycr0u#iefix") format("embedded-opentype"),
-    url("../icons/icomoon.ttf?qycr0u") format("truetype"),
-    url("../icons/icomoon.woff?qycr0u") format("woff"),
-    url("../icons/icomoon.svg?qycr0u#icomoon") format("svg");
+  font-family: 'icomoon';
+  src:  url('../icons/icomoon.eot?sjton5');
+  src:  url('../icons/icomoon.eot?sjton5#iefix') format('embedded-opentype'),
+    url('../icons/icomoon.ttf?sjton5') format('truetype'),
+    url('../icons/icomoon.woff?sjton5') format('woff'),
+    url('../icons/icomoon.svg?sjton5#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
+  font-family: 'icomoon' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -26,11 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-edit:before {
-  content: "\e904";
+.icon-open:before {
+  content: "\e905";
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-2);
 }
 .icon-random:before {
-  content: "\e905";
+  content: "\e906";
+  font-weight: 600;
+}
+.icon-edit:before {
+  content: "\e904";
 }
 .icon-grades:before {
   content: "\e901";

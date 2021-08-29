@@ -18,29 +18,25 @@ function upgradeBar(points) {
 
 //! To move
 function initAcc(elem, option){
-  //addEventListener on mouse click
   document.addEventListener('click', function (e) {
-      //check is the right element clicked
       if (!e.target.matches(elem+' .a-btn')) return;
       else{
-          //check if element contains active class
           if(!e.target.parentElement.classList.contains('active')){
               if(option==true){
-                   //if option true remove active class from all other accordions 
                   var elementList = document.querySelectorAll(elem +' .a-container');
                   Array.prototype.forEach.call(elementList, function (e) {
                       e.classList.remove('active');
+                      e.querySelector(".a-btn-symbol").classList.remove('rotate');
                   });
-              }    
-              //add active class on cliked accordion     
+              }
               e.target.parentElement.classList.add('active');
+              e.target.querySelector(".a-btn-symbol").classList.add('rotate');
           }else{
-              //remove active class on cliked accordion     
               e.target.parentElement.classList.remove('active');
+              e.target.querySelector(".a-btn-symbol").classList.remove('rotate');
           }
       }
   });
 }
 
-//activate accordion function
 initAcc('.accordion', true);

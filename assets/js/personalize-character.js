@@ -56,59 +56,59 @@ function showEditAvatar() {
       <h2 class="a-tittle">Personalize your character</h2>
         <div class="accordion">
           <div class="a-container">
-              <p class="a-btn">Show top element?</p>
+              <p class="a-btn"><span class="a-btn-symbol icon-open"></span>Show top element?</p>
               <div id="topChance" class="a-panel"></div>
           </div>
           <div class="a-container">
-              <p class="a-btn">Top</p>
+              <p class="a-btn"><span class="a-btn-symbol icon-open"></span>Top</p>
               <div id="top" class="a-panel"></div>
           </div>
           <div class="a-container">
-              <p class="a-btn">Hat Color</p>
+              <p class="a-btn"><span class="a-btn-symbol icon-open"></span>Hat Color</p>
               <div id="hatColor" class="a-panel"></div>
           </div>
           <div class="a-container">
-              <p class="a-btn">Hair color</p>
+              <p class="a-btn"><span class="a-btn-symbol icon-open"></span>Hair color</p>
               <div id="hairColor" class="a-panel"></div>
           </div>
           <div class="a-container">
-              <p class="a-btn">Show accessories?</p>
+              <p class="a-btn"><span class="a-btn-symbol icon-open"></span>Show accessories?</p>
               <div id="accessoriesChance" class="a-panel"></div>
           </div>
           <div class="a-container">
-              <p class="a-btn">Accessories</p>
+              <p class="a-btn"><span class="a-btn-symbol icon-open"></span>Accessories</p>
               <div id="accessories" class="a-panel"></div>
           </div>
           <div class="a-container">
-              <p class="a-btn">AccessoriesColor</p>
+              <p class="a-btn"><span class="a-btn-symbol icon-open"></span>AccessoriesColor</p>
               <div id="accessoriesColor" class="a-panel"></div>
           </div>
           <div class="a-container">
-              <p class="a-btn">Clothes</p>
+              <p class="a-btn"><span class="a-btn-symbol icon-open"></span>Clothes</p>
               <div id="clothes" class="a-panel"></div>
           </div>
           <div class="a-container">
-              <p class="a-btn">Clothes color</p>
+              <p class="a-btn"><span class="a-btn-symbol icon-open"></span>Clothes color</p>
               <div id="clothesColor" class="a-panel"></div>
           </div>
           <div class="a-container">
-              <p class="a-btn">Eyes</p>
+              <p class="a-btn"><span class="a-btn-symbol icon-open"></span>Eyes</p>
               <div id="eyes" class="a-panel"></div>
           </div>
           <div class="a-container">
-              <p class="a-btn">Eyebrows</p>
+              <p class="a-btn"><span class="a-btn-symbol icon-open"></span>Eyebrows</p>
               <div id="eyebrow" class="a-panel"></div>
           </div>
           <div class="a-container">
-              <p class="a-btn">Mouth</p>
+              <p class="a-btn"><span class="a-btn-symbol icon-open"></span>Mouth</p>
               <div id="mouth" class="a-panel"></div>
           </div>
           <div class="a-container">
-              <p class="a-btn">Skin</p>
+              <p class="a-btn"><span class="a-btn-symbol icon-open"></span>Skin</p>
               <div id="skin" class="a-panel"></div>
           </div>
           <div class="a-container">
-              <p class="a-btn">Clothe graphics</p>
+              <p class="a-btn"><span class="a-btn-symbol icon-open"></span>Clothe graphics</p>
               <div id="clotheGraphics" class="a-panel"></div>
           </div>
         </div>
@@ -130,7 +130,7 @@ function showEditAvatar() {
 
 function createModal() {
   if (urlCharacter == "") {
-    document.getElementById("image").src = `https://avatars.dicebear.com/api/avataaars/${seed}.svg?`
+    document.getElementById("image").src = `https://avatars.dicebear.com/api/avataaars/${seed}.svg?facialHairChance=0&`
   } else {
     document.getElementById("image").src = urlCharacter
   }
@@ -175,7 +175,7 @@ function saveAvatar() {
 
 function personalizeCharacter(request, param, value) {
   if (request == "get") {
-    let url = `https://avatars.dicebear.com/api/avataaars/${seed}.svg?`
+    let url = `https://avatars.dicebear.com/api/avataaars/${seed}.svg?facialHairChance=0&`
     Object.keys(options).forEach(key => {
       let option = options[key]
       if (option != "undefined") {
