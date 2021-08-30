@@ -368,7 +368,7 @@ transform: rotate(15deg);
 }
 
 .point-width {
-  width: calc(1% * var(--progress-bar));
+  width: calc(1% * (50 + var(--progress-bar)));
 }
 
 .character--container {

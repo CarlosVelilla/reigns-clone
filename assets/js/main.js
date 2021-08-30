@@ -4,19 +4,6 @@ fillName();
 getRandomCharacter()
 
 //! To move
-function upgradeBar(points) {
-  let progressBarValue = getComputedStyle(
-    document.documentElement
-  ).getPropertyValue("--progress-bar");
-
-  let actualProgressBar = parseInt(progressBarValue) + points;
-  document.documentElement.style.setProperty(
-    "--progress-bar",
-    actualProgressBar
-  );
-}
-
-//! To move
 function initAcc(elem, option){
   document.addEventListener('click', function (e) {
       if (!e.target.matches(elem+' .a-btn')) return;

@@ -57,11 +57,22 @@ function createCard(cardId, firstCard) {
     });
 }
 
-async function nextCard(event) {
-  editFactors(event)
-  createCard(event.target.dataset.tocard);
-  toggleDataDisplayed()
-  document.getElementById("flip-card--inner").classList.toggle("rotate--plus");
+function nextCard(event) {
+  editScore(event)
+  /* We use a small timeout to give time to the editScore function to run */
+  setTimeout(() => {
+    let currentTotalPoints = getCurrentPointsTotal()
+    editProgressBar(currentTotalPoints)
+    let gameOver = isGameOver(currentTotalPoints)
+    if (!gameOver) {
+      createCard(event.target.dataset.tocard);
+      toggleDataDisplayed()
+      document.getElementById("flip-card--inner").classList.toggle("rotate--plus");
+    } else {
+      // TODO GAME OVER FUNCTIONALITY
+      console.log("Game over!");
+    }
+  }, 50)
 }
 
 function toggleDataDisplayed() {
@@ -71,32 +82,50 @@ function toggleDataDisplayed() {
   showedcard.dataset.displayed="false"
 }
 
-
-
-function editFactors(event) {
+function editScore(event) {
   let cardId = event.target.dataset.cardid
   let action = event.target.dataset.action
   fetch(`${URL}/modifiers/${cardId}-${action}`)
   .then((response) => response.json())
   .then((data) => Object.keys(data).forEach(factor => {
     if (factor != "id") {
-      editFactorClass(factor, parseInt(data[factor]))
+      editFactor(factor, parseInt(data[factor]))
     }
   }));
 }
 
-function editFactorClass(factor, points) {
+function editFactor(factor, points) {
   let element = document.querySelector(`[data-icon="${factor}"]`)
-  let currentPoints = getCurrentPoints(factor)
+  let currentPoints = getCurrentPointsByFactor(factor)
+  element.dataset.points = points+currentPoints
   element.classList.remove(`pa-${currentPoints}`)
   element.classList.add(`pa-${points+currentPoints}`)
-  element.dataset.points = points+currentPoints
 }
 
-function getCurrentPoints(factor) {
+function getCurrentPointsByFactor(factor) {
   let element = document.querySelector(`[data-icon="${factor}"]`)
   let result = element.dataset.points
   return parseInt(result)
+}
+
+function getCurrentPointsTotal() {
+  let factors = document.querySelectorAll(`[data-points]`)
+  let totalPoints = 0
+  factors.forEach(factor => {
+    totalPoints += parseInt(factor.dataset.points)
+  })
+  return totalPoints
+}
+
+function editProgressBar(points) {
+  // console.log("Points "+points);
+  document.documentElement.style.setProperty("--progress-bar", (points-15)*10);
+  // console.log("Variable "+getComputedStyle(document.documentElement).getPropertyValue("--progress-bar"));
+}
+
+function isGameOver(totalPoints) {
+  if (totalPoints >= 20) return true
+  else return false
 }
 
 export { createCard, nextCard };

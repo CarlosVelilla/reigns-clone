@@ -150,7 +150,7 @@
     {
       "id": "card-2-accept",
       "influence": 0,
-      "grades": 0,
+      "grades": -2,
       "collection": 0
     },
     {
@@ -176,7 +176,7 @@
       "id": "card-4-accept",
       "influence": 0,
       "grades": 0,
-      "collection": 0
+      "collection": 5
     },
     {
       "id": "card-4-decline",
