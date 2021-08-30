@@ -25,7 +25,7 @@
     {
       "id": "card-1",
       "text": "Welcome! You are our new student, aren't you? We are so glad to meet you. There are two sits, where do you prefer to sit?",
-      "advice": "Welcome to Your Highness, choose one of these options to continue"
+      "advice": "Welcome to Your Highness, choose an option to continue"
     },
     {
       "id": "card-2",
@@ -34,7 +34,7 @@
     },
     {
       "id": "card-3",
-      "text": "Our ruler! He was the king of…. .... …. Almost First of His Name, The One Who Eated More Sandwiches in Jeremy's last birthday…",
+      "text": "Our ruler! He was The King of the Sand Pit, Almost First of His Name (he has an older sister), The One Who Eated More Sandwiches in Jeremy's last birthday…",
       "advice": false
     },
     {
@@ -45,7 +45,7 @@
     {
       "id": "card-5",
       "text": "What?! This one? Don't even think about it, I'm going to be the next king! Do you hear me, kid?",
-      "advice": false
+      "advice": "Care! Depending on what you decide, your markers can change"
     }
   ],
   "character": [
@@ -65,7 +65,7 @@
       "id": "card-3",
       "name": "Judy",
       "background": "#fff",
-      "url": "https://avatars.dicebear.com/api/avataaars/RBknc.svg?hairColor=black"
+      "url": "https://avatars.dicebear.com/api/avataaars/RBknc.svg?hairColor=black&eyes=hearts"
     },
     {
       "id": "card-4",
@@ -149,7 +149,7 @@
     },
     {
       "id": "card-2-accept",
-      "influence": 0,
+      "influence": 2,
       "grades": -2,
       "collection": 0
     },
@@ -176,7 +176,7 @@
       "id": "card-4-accept",
       "influence": 0,
       "grades": 0,
-      "collection": 5
+      "collection": 7
     },
     {
       "id": "card-4-decline",

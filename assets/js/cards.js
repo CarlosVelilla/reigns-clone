@@ -64,13 +64,16 @@ function nextCard(event) {
     let currentTotalPoints = getCurrentPointsTotal()
     editProgressBar(currentTotalPoints)
     let gameOver = isGameOver(currentTotalPoints)
-    if (!gameOver) {
+    if (gameOver == "continue") {
       createCard(event.target.dataset.tocard);
       toggleDataDisplayed()
       document.getElementById("flip-card--inner").classList.toggle("rotate--plus");
-    } else {
-      // TODO GAME OVER FUNCTIONALITY
-      console.log("Game over!");
+    } else if (gameOver == "fail") {
+      // TODO GAME OVER FUNCTIONALITY IF FAIL
+      console.log("Game over, you loose!");
+    } else if (gameOver == "success") {
+      // TODO GAME OVER FUNCTIONALITY IF SUCCESS
+      console.log("Game over, your highness!");
     }
   }, 50)
 }
@@ -97,9 +100,15 @@ function editScore(event) {
 function editFactor(factor, points) {
   let element = document.querySelector(`[data-icon="${factor}"]`)
   let currentPoints = getCurrentPointsByFactor(factor)
-  element.dataset.points = points+currentPoints
+  let totalPoints = points+currentPoints
+  if (totalPoints > 10) {
+    totalPoints = 10
+  } else if (totalPoints < 0) {
+    totalPoints = 0
+  }
+  element.dataset.points = totalPoints
   element.classList.remove(`pa-${currentPoints}`)
-  element.classList.add(`pa-${points+currentPoints}`)
+  element.classList.add(`pa-${totalPoints}`)
 }
 
 function getCurrentPointsByFactor(factor) {
@@ -124,8 +133,9 @@ function editProgressBar(points) {
 }
 
 function isGameOver(totalPoints) {
-  if (totalPoints >= 20) return true
-  else return false
+  if (totalPoints >= 17) return "success"
+  else if (totalPoints > 0) return "continue"
+  else if (totalPoints <= 0) return "fail"
 }
 
 export { createCard, nextCard };
