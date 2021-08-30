@@ -52,31 +52,31 @@
     {
       "id": "card-1",
       "name": "Prof. Raymond",
-      "background": "#fff",
+      "background": "#fafafa",
       "url": "https://avatars.dicebear.com/api/avataaars/1vyVF.svg?mouth=default"
     },
     {
       "id": "card-2",
       "name": "Judy",
-      "background": "#fff",
+      "background": "#fafafa",
       "url": "https://avatars.dicebear.com/api/avataaars/RBknc.svg?hairColor=black"
     },
     {
       "id": "card-3",
       "name": "Judy",
-      "background": "#fff",
+      "background": "#fafafa",
       "url": "https://avatars.dicebear.com/api/avataaars/RBknc.svg?hairColor=black&eyes=hearts"
     },
     {
       "id": "card-4",
       "name": "Judy",
-      "background": "#fff",
+      "background": "#fafafa",
       "url": "https://avatars.dicebear.com/api/avataaars/RBknc.svg?hairColor=black"
     },
     {
       "id": "card-5",
       "name": "Rocky",
-      "background": "#fff",
+      "background": "#fafafa",
       "url": "https://avatars.dicebear.com/api/avataaars/kXmtz.svg?hairColor=auburn&eyes=default&eyebrow=angryNatural&mouth=concerned"
     }
   ],

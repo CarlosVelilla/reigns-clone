@@ -3,7 +3,22 @@ import { fillName, getRandomCharacter } from "./home.js";
 fillName();
 getRandomCharacter();
 
-//! To move
+let gameModeModifier = "undefined"
+let gameMode = "undefined"
+
+document.getElementById("mode-easy").addEventListener("click", selectMode)
+document.getElementById("mode-medium").addEventListener("click", selectMode)
+document.getElementById("mode-hard").addEventListener("click", selectMode)
+
+function selectMode(event) {
+  let activeBtn = document.querySelectorAll(".mode-active")
+  activeBtn.forEach(btn => btn.classList.remove("mode-active"))
+  event.target.classList.add("mode-active")
+  gameMode = event.target.id
+  gameModeModifier = parseInt(event.target.value)
+}
+
+//! Move to personalize character
 function initAcc(elem, option){
   document.addEventListener('click', function (e) {
       if (!e.target.matches(elem+' .a-btn')) return;
@@ -61,3 +76,5 @@ function playTheMusic () {
 playTheMusic();
 
 initAcc(".accordion", true);
+
+export { gameModeModifier, gameMode }

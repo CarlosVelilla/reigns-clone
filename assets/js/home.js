@@ -2,6 +2,7 @@
 import { getRandomName } from "./names-functionality.js";
 import { createCard, nextCard } from "./cards.js";
 import { showEditAvatar, cleanUrl, urlCharacter } from "./personalize-character.js";
+import { gameMode } from "./main.js";
 
 /* VARIABLES */
 const inputDice = document.getElementById("input--dice");
@@ -18,7 +19,7 @@ inputDice.addEventListener("click", fillName);
 avatartBtn.addEventListener("click", showEditAvatar);
 randomAvatarBtn.addEventListener("click", getRandomCharacter)
 creditBtn.addEventListener("click", showModal);
-playBtn.addEventListener("click", loadGame);
+playBtn.addEventListener("click", checkMode);
 
 /* FUNCTIONALITIES */
 function fillName() {
@@ -79,6 +80,15 @@ function showModal() {
 function closeModal() {
   let modalMainContainer = document.getElementById("credits-modal-container");
   modalMainContainer.remove();
+}
+
+function checkMode() {
+  if (gameMode != "undefined") {
+    loadGame()
+  } else {
+    document.getElementById("mode-text").classList.add("vibrant-text")
+    setTimeout(() => {document.getElementById("mode-text").classList.remove("vibrant-text")}, 500)
+  }
 }
 
 function loadGame() {

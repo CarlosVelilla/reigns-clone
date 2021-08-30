@@ -1,3 +1,5 @@
+import { gameModeModifier, gameMode } from "./main.js"
+
 /* GLOBAL VARIABLES */
 const URL = "http://localhost:3000";
 
@@ -128,12 +130,24 @@ function getCurrentPointsTotal() {
 
 function editProgressBar(points) {
   // console.log("Points "+points);
-  document.documentElement.style.setProperty("--progress-bar", (points-15)*10);
+  document.documentElement.style.setProperty("--progress-bar", (points-15)*gameModeModifier);
   // console.log("Variable "+getComputedStyle(document.documentElement).getPropertyValue("--progress-bar"));
 }
 
+function pointsToWin(mode) {
+  switch (mode) {
+    case 'mode-easy':
+      return 5
+    case 'mode-medium':
+      return 10
+    case 'mode-hard':
+      return 30
+  }
+}
+
 function isGameOver(totalPoints) {
-  if (totalPoints >= 17) return "success"
+  let pointsToSuccess = 15 + pointsToWin(gameMode)
+  if (totalPoints >= pointsToSuccess) return "success"
   else if (totalPoints > 0) return "continue"
   else if (totalPoints <= 0) return "fail"
 }
