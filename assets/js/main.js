@@ -1,7 +1,7 @@
 import { fillName, getRandomCharacter } from "./home.js";
 
 fillName();
-getRandomCharacter()
+getRandomCharacter();
 
 //! To move
 function initAcc(elem, option){
@@ -26,4 +26,38 @@ function initAcc(elem, option){
   });
 }
 
-initAcc('.accordion', true);
+//! To move - Audio
+import muteIcon from "https://cdn.skypack.dev/lottie-web";
+const muteIconContainer = document.getElementById("mute-icon");
+let gameAudio = document.getElementById("audio")
+gameAudio.play();
+let muteState = "unmute";
+const muteAnimation = muteIcon.loadAnimation({
+  container: muteIconContainer,
+  path: "https://maxst.icons8.com/vue-static/landings/animated-icons/icons/mute/mute.json",
+  renderer: "svg",
+  loop: false,
+  autoplay: false,
+  name: "Mute Animation",
+});
+
+muteIconContainer.addEventListener("click", () => {
+    if(muteState == "unmute") {
+      gameAudio.pause();
+        muteAnimation.playSegments([0, 15], true);
+        muteState = "mute";
+      } else {
+        gameAudio.play();
+        muteAnimation.playSegments([15, 25], true);
+        muteState = "unmute";
+    }
+});
+
+//!Not working
+function playTheMusic () {
+  gameAudio.play()
+}
+
+playTheMusic();
+
+initAcc(".accordion", true);
