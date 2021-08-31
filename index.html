@@ -9,6 +9,7 @@
     <link rel="icon" href="./assets/img/favicon.svg" />
     <script type="module" src="/assets/js/main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
   </head>
   <body>
     <div class="background"></div>
@@ -38,9 +39,11 @@
         </div>
         <div class="mode__selector">
           <p id="mode-text" class="mode__text">Select mode</p>
-          <button id="mode-easy" value="10">Kindergarden</button>
-          <button id="mode-medium" value="5">School</button>
-          <button id="mode-hard" value="1">Assembler</button>
+          <div class="mode__btn--container">
+            <button id="mode-easy" class="mode__btn" value="10">Kindergarden</button>
+            <button id="mode-medium" class="mode__btn" value="5">School</button>
+            <button id="mode-hard" class="mode__btn" value="1">Assembler</button>
+          </div>
         </div>
         <div class="container__start--btn">
           <div id="start" class="start">

@@ -1,4 +1,4 @@
-@media (min-width: 1381px) and (max-width: 1540px) and (orientation: landscape) {
+@media (min-width: 1025px) and (max-width: 1380px) and (orientation: landscape) {
 
 body {
   width: 100wh;
@@ -56,8 +56,8 @@ body {
   position: absolute;
   border-radius: 50%;
   background-color: var(--color-4);
-  width: 20%;
-  left: 40%;
+  width: 15%;
+  left: 42.5%;
   top: 30%;
 }
 
@@ -66,9 +66,9 @@ body {
   background-color: white;
   border-radius: 50%;
   border: solid 1px var(--color-2);
-  font-size: 2rem;
-  top: 50%;
-  left: 40%;
+  font-size: 1.3rem;
+  top: 54%;
+  left: 43%;
   padding: 1%;
   z-index: 2;
   cursor: pointer;
@@ -84,9 +84,9 @@ body {
   background-color: white;
   border-radius: 50%;
   border: solid 1px var(--color-2);
-  font-size: 2rem;
-  top: 50%;
-  right: 40%;
+  font-size: 1.3rem;
+  top: 54%;
+  right: 43%;
   padding: 1%;
   z-index: 2;
   cursor: pointer;
@@ -99,7 +99,7 @@ body {
 
 .mode__selector {
   position: absolute;
-  top: 64%;
+  top: 65%;
   width: 40%;
   left: 30%
 }
@@ -156,7 +156,7 @@ body {
   display: flex;
   justify-content: space-between;
   position: fixed;
-  top: 75%;
+  top: 78%;
   width: 30%;
   left: 35%;
 }
@@ -187,7 +187,7 @@ body {
 
 .container__start--btn {
   position: fixed;
-  top: 81%;
+  top: 86%;
   left: 40%;
   width: 20%;
 }
@@ -252,9 +252,9 @@ body {
 .credits__modal--window {
   position: absolute;
   width: 50%;
-  height: 60%;
+  height: 70%;
   right: 25%;
-  top: 20%;
+  top: 15%;
   background-color: white;
   border-radius: 25px;
   box-shadow: 5px 5px 12px rgb(0, 0, 0);
