@@ -8,7 +8,7 @@ import { gameMode } from "./main.js";
 const inputDice = document.getElementById("input--dice");
 const avatartBtn = document.getElementById("avatar-edit");
 const randomAvatarBtn = document.getElementById("avatar-random")
-const creditBtn = document.getElementById("credits");
+let creditBtn = document.getElementById("credits");
 const playBtn = document.getElementById("start");
 
 let userName = getRandomName()
