@@ -179,11 +179,7 @@ function loadGame() {
       createCard("card-1", false)
     }
 
-    if (urlCharacter == "") {
-      document.getElementById("character-avatar-bar").src = `https://avatars.dicebear.com/api/avataaars/${seed}.svg?facialHairChance=0&`
-    } else {
-      document.getElementById("character-avatar-bar").src = urlCharacter
-    }
+    document.getElementById("character-avatar-bar").src = getUrlCharacter()
 
     mainContainer.classList.remove("disappear")
     document.getElementById("decline-button").addEventListener("click", nextCard)
@@ -192,6 +188,15 @@ function loadGame() {
     generateIcons()
   }, 500);
 }
+
+function getUrlCharacter() {
+  if (urlCharacter == "") {
+    return `https://avatars.dicebear.com/api/avataaars/${seed}.svg?facialHairChance=0&`
+  } else {
+    return urlCharacter
+  }
+}
+
 
 function generateIcons() {
   const pointsIcon = document.querySelectorAll("[data-icon]");
@@ -214,4 +219,4 @@ function generateIcons() {
   });
 }
 
-export { fillName, getRandomCharacter, getRandomSeed, seed, userName };
+export { fillName, getRandomCharacter, getRandomSeed, getUrlCharacter, seed, userName };

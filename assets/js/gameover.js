@@ -1,8 +1,6 @@
-import { urlCharacter } from "./personalize-character.js";
-import { userName } from "./home.js";
+import { userName, getUrlCharacter } from "./home.js";
 
 const mainContainer = document.getElementById("container");
-console.log(urlCharacter);
 
 // ? SHOWS CREDITS MODAL
 function showCredits() {
@@ -77,7 +75,7 @@ function gameOverWindowContent(result, points) {
   const gameLoser = document.getElementById("game-loser")
   const gameWinner = document.getElementById("game-winner")
   const gameFriend = document.getElementById("game-friend")
-console.log(urlCharacter);
+
   const gameResultText = document.getElementById("game-result-text")
   let totalPointsText = document.getElementById("total-points-text")
 
@@ -85,13 +83,13 @@ console.log(urlCharacter);
 
   if (result == "success") {
     gameLoser.src = "https://avatars.dicebear.com/api/avataaars/eWJS7.svg?facialHairChance=0&hairColor=auburn&clothes=shirtCrewNeck&clothesColor=blue03&skin=pale&undefined=undefined&top=shortWaved&"
-    gameWinner.src = urlCharacter
+    gameWinner.src = getUrlCharacter()
     gameFriend.src = "https://avatars.dicebear.com/api/avataaars/RBknc.svg?hairColor=black&eyes=hearts"
 
     gameResultText.textContent = `Congratulations, Your Highness! You have been crowned as ${userName}.`
 
   } else if (result == "fail") {
-    gameLoser.src = urlCharacter += 'eyes=cry'
+    gameLoser.src = getUrlCharacter() += 'eyes=cry'
     gameWinner.src = "https://avatars.dicebear.com/api/avataaars/kXmtz.svg?hairColor=auburn&eyes=side&eyebrow=angryNatural&mouth=tongue"
     gameFriend.src = "https://avatars.dicebear.com/api/avataaars/RBknc.svg?hairColor=black&eyes=closed&eyebrow=default&mouth=concerned"
 
