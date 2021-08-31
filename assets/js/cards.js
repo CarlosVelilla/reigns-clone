@@ -72,7 +72,7 @@ function nextCard(event) {
       toggleDataDisplayed()
       document.getElementById("flip-card--inner").classList.toggle("rotate--plus");
     } else if (gameOver == "fail" || gameOver == "success") {
-      gameOverWindow(gameOver);
+      gameOverWindow(gameOver, currentTotalPoints);
     }
   }, 50)
 }

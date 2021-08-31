@@ -19,6 +19,10 @@
     {
       "id": "card-5",
       "parentCard": "card-4"
+    },
+    {
+      "id": "card-0",
+      "parentCard": false
     }
   ],
   "content": [
@@ -46,6 +50,11 @@
       "id": "card-5",
       "text": "What?! This one? Don't even think about it, I'm going to be the next king! Do you hear me, kid?",
       "advice": "Care! Depending on what you decide, your markers can change"
+    },
+    {
+      "id": "card-0",
+      "text": "Welcome! You are our new student, aren't you? We are so glad to meet you. There are two sits, where do you prefer to sit?",
+      "advice": "Welcome to Your Highness, choose an option to continue"
     }
   ],
   "character": [
@@ -78,6 +87,12 @@
       "name": "Rocky",
       "background": "#fafafa",
       "url": "https://avatars.dicebear.com/api/avataaars/kXmtz.svg?hairColor=auburn&eyes=default&eyebrow=angryNatural&mouth=concerned"
+    },
+    {
+      "id": "card-0",
+      "name": "Manu Assembler",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/nSC3l.svg?hairColor=black&accessories=prescription02&accessoriesColor=black&clothes=graphicShirt&clothesColor=black&eyes=default&eyebrow=defaultNatural&mouth=smile&skin=light&clotheGraphics=bat&top=shortCurly&accessoriesChance=100&facialHairChance=100&facialHair=light&facialHairColor=black"
     }
   ],
   "accept": [
@@ -105,6 +120,11 @@
       "id": "card-5",
       "toCard": "card-6",
       "text": "I'll do whatever I want, you bully"
+    },
+    {
+      "id": "card-0",
+      "toCard": "card-2",
+      "text": "In the front"
     }
   ],
   "decline": [
@@ -132,6 +152,11 @@
       "id": "card-5",
       "toCard": "card-7",
       "text": "*You don't answer, and start paying attention to the class*"
+    },
+    {
+      "id": "card-0",
+      "toCard": "card-2",
+      "text": "In the back"
     }
   ],
   "modifiers": [
@@ -159,7 +184,6 @@
       "grades": 0,
       "collection": 0
     },
-    
     {
       "id": "card-3-accept",
       "influence": 0,
@@ -193,6 +217,18 @@
     {
       "id": "card-5-accept",
       "influence": -1,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-0-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-0-decline",
+      "influence": 0,
       "grades": 0,
       "collection": 0
     }

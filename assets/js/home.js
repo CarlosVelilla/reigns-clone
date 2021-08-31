@@ -173,7 +173,12 @@ function loadGame() {
     </div>
     `;
 
-    createCard("card-1", false)
+    if (gameMode == "mode-hard") {
+      createCard("card-0", false)
+    } else {
+      createCard("card-1", false)
+    }
+
     if (urlCharacter == "") {
       document.getElementById("character-avatar-bar").src = `https://avatars.dicebear.com/api/avataaars/${seed}.svg?facialHairChance=0&`
     } else {
