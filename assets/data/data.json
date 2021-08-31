@@ -168,9 +168,9 @@
     },
     {
       "id": "card-1-decline",
-      "influence": 0,
-      "grades": 0,
-      "collection": 0
+      "influence": -10,
+      "grades": -10,
+      "collection": -10
     },
     {
       "id": "card-2-accept",

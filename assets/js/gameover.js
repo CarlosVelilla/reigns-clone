@@ -80,16 +80,17 @@ function gameOverWindowContent(result, points) {
   let totalPointsText = document.getElementById("total-points-text")
 
   totalPointsText.textContent = `You got ${points} points!`
+  let urlCharacterImg = getUrlCharacter();
 
   if (result == "success") {
     gameLoser.src = "https://avatars.dicebear.com/api/avataaars/eWJS7.svg?facialHairChance=0&hairColor=auburn&clothes=shirtCrewNeck&clothesColor=blue03&skin=pale&undefined=undefined&top=shortWaved&"
-    gameWinner.src = getUrlCharacter()
+    gameWinner.src = urlCharacterImg
     gameFriend.src = "https://avatars.dicebear.com/api/avataaars/RBknc.svg?hairColor=black&eyes=hearts"
 
     gameResultText.textContent = `Congratulations, Your Highness! You have been crowned as ${userName}.`
 
   } else if (result == "fail") {
-    gameLoser.src = getUrlCharacter() += 'eyes=cry'
+    gameLoser.src = urlCharacterImg += 'eyes=cry'
     gameWinner.src = "https://avatars.dicebear.com/api/avataaars/kXmtz.svg?hairColor=auburn&eyes=side&eyebrow=angryNatural&mouth=tongue"
     gameFriend.src = "https://avatars.dicebear.com/api/avataaars/RBknc.svg?hairColor=black&eyes=closed&eyebrow=default&mouth=concerned"
 
@@ -97,6 +98,5 @@ function gameOverWindowContent(result, points) {
 
   }
 }
-
 
 export { gameOverWindow }

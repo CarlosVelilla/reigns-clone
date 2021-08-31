@@ -68,7 +68,6 @@ muteIconContainer.addEventListener("click", () => {
     }
 });
 
-
 initAcc(".accordion", true);
 
 export { gameModeModifier, gameMode }
