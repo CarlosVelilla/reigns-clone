@@ -574,6 +574,73 @@ transform: rotate(15deg);
   opacity: 0;
 }
 
+.container__result {
+  position: absolute;
+  width: 60%;
+  top:5%;
+  left: 20%;
+}
+
+.crown__result {
+  position: absolute;
+  top: 5%;
+  left: 43%;
+  color: white;
+  font-size: 7rem;
+  text-align: center;
+  z-index: 2;
+}
+
+.container__result--imgs {
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: 10%;
+  z-index: 1;
+}
+
+.game__loser {
+  width: 25%;
+  margin-top: 10%;
+  background-color: var(--color-3);
+  border-radius: 50%;
+}
+
+.game__winner {
+  width: 35%;
+  background-color: var(--color-3);
+  border-radius: 50%;
+}
+
+.game__friend {
+  margin-top: 10%;
+  width: 25%;
+  background-color: var(--color-3);
+  border-radius: 50%;
+}
+
+.game__result--text {
+  margin: 5% 0 2% 0;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 4px 4px 8px #000000;
+}
+
+.points--line {
+  width: 20%;
+  border: solid 1px var(--color-3);
+}
+
+.total--points {
+  margin-top: 2%;
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  text-shadow: 2px 2px 4px #000000;
+}
+
 /* Utils */
 .flex-center {
   display: flex;
