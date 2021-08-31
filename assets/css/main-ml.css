@@ -574,8 +574,6 @@ transform: rotate(15deg);
   opacity: 0;
 }
 
-/* ------------------------------------------ */
-
 .container__result {
   position: absolute;
   width: 60%;
