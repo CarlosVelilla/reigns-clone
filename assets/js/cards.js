@@ -44,7 +44,7 @@ function createCard(cardId, firstCard) {
   fetch(`${URL}/content/${cardId}`)
     .then((response) => response.json())
     .then((data) => {
-      TEXT.textContent = data.text;
+      TEXT.innerHTML = data.text;
       data.advice === false
         ? (ADVICE.textContent = "")
         : (ADVICE.textContent = data.advice);

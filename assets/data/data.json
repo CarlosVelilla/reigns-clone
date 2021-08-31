@@ -48,7 +48,7 @@
     },
     {
       "id": "card-5",
-      "text": "What?! This one? Don't even think about it, I'm going to be the next king! Do you hear me, kid?",
+      "text": "What?! This one? Don't even think about it, <span class='bold-text'>I'm going to be the next king</span>! Do you hear me, kid?",
       "advice": "Care! Depending on what you decide, your markers can change"
     },
     {
