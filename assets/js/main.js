@@ -68,10 +68,6 @@ muteIconContainer.addEventListener("click", () => {
     }
 });
 
-//!Not working
-function playTheMusic () {
-  gameAudio.play()
-}
 
 playTheMusic();
 

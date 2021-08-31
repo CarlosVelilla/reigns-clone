@@ -179,7 +179,7 @@ function loadGame() {
     } else {
       document.getElementById("character-avatar-bar").src = urlCharacter
     }
-    
+
     mainContainer.classList.remove("disappear")
     document.getElementById("decline-button").addEventListener("click", nextCard)
     document.getElementById("accept-button").addEventListener("click", nextCard)
