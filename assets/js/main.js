@@ -46,7 +46,7 @@ import muteIcon from "https://cdn.skypack.dev/lottie-web";
 const muteIconContainer = document.getElementById("mute-icon");
 let gameAudio = document.getElementById("audio")
 gameAudio.play();
-let muteState = "unmute";
+let muteState = "mute";
 const muteAnimation = muteIcon.loadAnimation({
   container: muteIconContainer,
   path: "https://maxst.icons8.com/vue-static/landings/animated-icons/icons/mute/mute.json",
@@ -57,14 +57,14 @@ const muteAnimation = muteIcon.loadAnimation({
 });
 
 muteIconContainer.addEventListener("click", () => {
-    if(muteState == "unmute") {
-      gameAudio.pause();
-        muteAnimation.playSegments([0, 15], true);
-        muteState = "mute";
-      } else {
-        gameAudio.play();
+    if(muteState == "mute") {
+      gameAudio.play();
         muteAnimation.playSegments([15, 25], true);
         muteState = "unmute";
+      } else {
+        gameAudio.pause();
+        muteAnimation.playSegments([0, 15], true);
+        muteState = "mute";
     }
 });
 
