@@ -1,4 +1,5 @@
 import { gameModeModifier, gameMode } from "./main.js"
+import { gameOverWindow } from "./gameover.js"
 
 /* GLOBAL VARIABLES */
 const URL = "http://localhost:3000";
@@ -43,7 +44,7 @@ function createCard(cardId, firstCard) {
   fetch(`${URL}/content/${cardId}`)
     .then((response) => response.json())
     .then((data) => {
-      TEXT.textContent = data.text;
+      TEXT.innerHTML = data.text;
       data.advice === false
         ? (ADVICE.textContent = "")
         : (ADVICE.textContent = data.advice);
@@ -70,12 +71,8 @@ function nextCard(event) {
       createCard(event.target.dataset.tocard);
       toggleDataDisplayed()
       document.getElementById("flip-card--inner").classList.toggle("rotate--plus");
-    } else if (gameOver == "fail") {
-      // TODO GAME OVER FUNCTIONALITY IF FAIL
-      console.log("Game over, you loose!");
-    } else if (gameOver == "success") {
-      // TODO GAME OVER FUNCTIONALITY IF SUCCESS
-      console.log("Game over, your highness!");
+    } else if (gameOver == "fail" || gameOver == "success") {
+      gameOverWindow(gameOver, currentTotalPoints);
     }
   }, 50)
 }
@@ -141,7 +138,7 @@ function pointsToWin(mode) {
     case 'mode-medium':
       return 10
     case 'mode-hard':
-      return 30
+      return 15
   }
 }
 

@@ -7,3 +7,16 @@
 @import url("./main-lg.css");
 @import url("./main-xl.css");
 @import url("./main-xxl.css");
+
+
+
+
+/*! PENDING MOVE TO UTILS RESPONSIVE */
+
+.bold-text {
+  font-weight: 800;
+}
+
+.kindergarden-text {
+  font-family: var(--font-kids);
+}

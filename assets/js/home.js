@@ -8,7 +8,7 @@ import { gameMode } from "./main.js";
 const inputDice = document.getElementById("input--dice");
 const avatartBtn = document.getElementById("avatar-edit");
 const randomAvatarBtn = document.getElementById("avatar-random")
-const creditBtn = document.getElementById("credits");
+let creditBtn = document.getElementById("credits");
 const playBtn = document.getElementById("start");
 
 let userName = getRandomName()
@@ -173,13 +173,14 @@ function loadGame() {
     </div>
     `;
 
-    createCard("card-1", false)
-    if (urlCharacter == "") {
-      document.getElementById("character-avatar-bar").src = `https://avatars.dicebear.com/api/avataaars/${seed}.svg?facialHairChance=0&`
+    if (gameMode == "mode-hard") {
+      createCard("card-0", false) // Hi Manu!
     } else {
-      document.getElementById("character-avatar-bar").src = urlCharacter
+      createCard("card-1", false)
     }
-    
+
+    document.getElementById("character-avatar-bar").src = getUrlCharacter()
+
     mainContainer.classList.remove("disappear")
     document.getElementById("decline-button").addEventListener("click", nextCard)
     document.getElementById("accept-button").addEventListener("click", nextCard)
@@ -187,6 +188,15 @@ function loadGame() {
     generateIcons()
   }, 500);
 }
+
+function getUrlCharacter() {
+  if (urlCharacter == "") {
+    return `https://avatars.dicebear.com/api/avataaars/${seed}.svg?facialHairChance=0&`
+  } else {
+    return urlCharacter
+  }
+}
+
 
 function generateIcons() {
   const pointsIcon = document.querySelectorAll("[data-icon]");
@@ -209,4 +219,4 @@ function generateIcons() {
   });
 }
 
-export { fillName, getRandomCharacter, getRandomSeed, seed, userName };
+export { fillName, getRandomCharacter, getRandomSeed, getUrlCharacter, seed, userName };
