@@ -90,7 +90,7 @@ function gameOverWindowContent(result, points) {
     gameResultText.textContent = `Congratulations, Your Highness! You have been crowned as ${userName}.`
 
   } else if (result == "fail") {
-    gameLoser.src = urlCharacterImg += 'eyes=cry'
+    gameLoser.src = urlCharacterImg += 'eyes=cry&mouth=sad'
     gameWinner.src = "https://avatars.dicebear.com/api/avataaars/kXmtz.svg?hairColor=auburn&eyes=side&eyebrow=angryNatural&mouth=tongue"
     gameFriend.src = "https://avatars.dicebear.com/api/avataaars/RBknc.svg?hairColor=black&eyes=closed&eyebrow=default&mouth=concerned"
 
