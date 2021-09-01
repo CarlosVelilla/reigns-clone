@@ -138,7 +138,7 @@ function pointsToWin(mode) {
     case 'mode-medium':
       return 10
     case 'mode-hard':
-      return 30
+      return 15
   }
 }
 

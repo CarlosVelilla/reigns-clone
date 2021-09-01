@@ -174,7 +174,7 @@ function loadGame() {
     `;
 
     if (gameMode == "mode-hard") {
-      createCard("card-0", false)
+      createCard("card-0", false) // Hi Manu!
     } else {
       createCard("card-1", false)
     }

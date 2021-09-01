@@ -7,6 +7,7 @@ FORM.addEventListener('submit', (event) => {
   let parentCard = (formData.get('card-parent') == "") ? false : formData.get('card-parent')
   let advice = (formData.get('card-advice') == "") ? false : formData.get('card-advice')
   let randomUrlImg = (formData.get('card-url') == "") ? `https://avatars.dicebear.com/api/avataaars/${Math.ceil(Math.random()*100)}.svg` : formData.get('character-url')
+  let background = (formData.get('character-background') == "") ? "#fafafa" : formData.get('character-background')
 
   fetch(`${URL}/cards`, {
     method: 'POST',
@@ -31,7 +32,7 @@ FORM.addEventListener('submit', (event) => {
     body: JSON.stringify({
       id: formData.get('card-id'),
       name: formData.get('character-name'),
-      background: formData.get('character-background'),
+      background: background,
       url: randomUrlImg
     })})
 

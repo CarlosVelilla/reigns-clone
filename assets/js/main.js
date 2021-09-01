@@ -21,23 +21,23 @@ function selectMode(event) {
 //! Move to personalize character
 function initAcc(elem, option){
   document.addEventListener('click', function (e) {
-      if (!e.target.matches(elem+' .a-btn')) return;
-      else{
-          if(!e.target.parentElement.classList.contains('active')){
-              if(option==true){
-                  var elementList = document.querySelectorAll(elem +' .a-container');
-                  Array.prototype.forEach.call(elementList, function (e) {
-                      e.classList.remove('active');
-                      e.querySelector(".a-btn-symbol").classList.remove('rotate');
-                  });
-              }
-              e.target.parentElement.classList.add('active');
-              e.target.querySelector(".a-btn-symbol").classList.add('rotate');
-          }else{
-              e.target.parentElement.classList.remove('active');
-              e.target.querySelector(".a-btn-symbol").classList.remove('rotate');
-          }
+    if (!e.target.matches(elem+' .a-btn')) return;
+    else{
+      if(!e.target.parentElement.classList.contains('active')) {
+        if (option == true) {
+          var elementList = document.querySelectorAll(elem +' .a-container');
+          Array.prototype.forEach.call(elementList, function (e) {
+            e.classList.remove('active');
+            e.querySelector(".a-btn-symbol").classList.remove('rotate');
+          });
+        }
+        e.target.parentElement.classList.add('active');
+        e.target.querySelector(".a-btn-symbol").classList.add('rotate');
+      } else {
+        e.target.parentElement.classList.remove('active');
+        e.target.querySelector(".a-btn-symbol").classList.remove('rotate');
       }
+    }
   });
 }
 
@@ -57,15 +57,15 @@ const muteAnimation = muteIcon.loadAnimation({
 });
 
 muteIconContainer.addEventListener("click", () => {
-    if(muteState == "mute") {
-      gameAudio.play();
-        muteAnimation.playSegments([15, 25], true);
-        muteState = "unmute";
-      } else {
-        gameAudio.pause();
-        muteAnimation.playSegments([0, 15], true);
-        muteState = "mute";
-    }
+  if(muteState == "mute") {
+    gameAudio.play();
+      muteAnimation.playSegments([15, 25], true);
+      muteState = "unmute";
+    } else {
+      gameAudio.pause();
+      muteAnimation.playSegments([0, 15], true);
+      muteState = "mute";
+  }
 });
 
 initAcc(".accordion", true);
