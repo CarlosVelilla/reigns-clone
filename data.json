@@ -1,0 +1,1272 @@
+{
+  "cards": [
+    {
+      "id": "card-1",
+      "parentCard": false
+    },
+    {
+      "id": "card-2",
+      "parentCard": "card-1"
+    },
+    {
+      "id": "card-3",
+      "parentCard": "card-2"
+    },
+    {
+      "id": "card-4",
+      "parentCard": "card-3"
+    },
+    {
+      "id": "card-5",
+      "parentCard": "card-4"
+    },
+    {
+      "id": "card-0",
+      "parentCard": false
+    },
+    {
+      "id": "card-7",
+      "parentCard": "card-5"
+    },
+    {
+      "id": "card-8",
+      "parentCard": "card-6"
+    },
+    {
+      "id": "card-9",
+      "parentCard": "card-7"
+    },
+    {
+      "id": "card-10",
+      "parentCard": "card-6, card-7"
+    },
+    {
+      "id": "card-11",
+      "parentCard": "card-8, card-9"
+    },
+    {
+      "id": "card-12",
+      "parentCard": "card-10, card-11"
+    },
+    {
+      "id": "card-6",
+      "parentCard": "card-5"
+    },
+    {
+      "id": "card-13",
+      "parentCard": "card-12"
+    },
+    {
+      "id": "card-14",
+      "parentCard": "card-13"
+    },
+    {
+      "id": "card-15",
+      "parentCard": "card-14"
+    },
+    {
+      "id": "card-16",
+      "parentCard": "card-15"
+    },
+    {
+      "id": "card-17",
+      "parentCard": "card-16"
+    },
+    {
+      "id": "card-18",
+      "parentCard": "card-14"
+    },
+    {
+      "id": "card-19",
+      "parentCard": "card-15"
+    },
+    {
+      "id": "card-20",
+      "parentCard": "card-16"
+    },
+    {
+      "id": "card-21",
+      "parentCard": "card-17, card-20"
+    },
+    {
+      "id": "card-22",
+      "parentCard": "card-21"
+    },
+    {
+      "id": "card-23",
+      "parentCard": "card-22"
+    },
+    {
+      "id": "card-24",
+      "parentCard": "card-23"
+    },
+    {
+      "id": "card-26",
+      "parentCard": "card-24, card-25"
+    },
+    {
+      "id": "card-25",
+      "parentCard": "card-23"
+    },
+    {
+      "id": "card-27",
+      "parentCard": "card-25"
+    },
+    {
+      "id": "card-28",
+      "parentCard": "card-26, card-27"
+    },
+    {
+      "id": "card-29",
+      "parentCard": "card-21, card-28"
+    },
+    {
+      "id": "card-30",
+      "parentCard": "card-29"
+    },
+    {
+      "id": "card-31",
+      "parentCard": "card-30"
+    },
+    {
+      "id": "card-32",
+      "parentCard": "card-31"
+    },
+    {
+      "id": "card-33",
+      "parentCard": "card-31"
+    }
+  ],
+  "content": [
+    {
+      "id": "card-1",
+      "text": "Welcome! You are our new student, aren't you? We are so glad to meet you. There are two sits, where do you prefer to sit?",
+      "advice": "Welcome to Your Highness, choose an option to continue"
+    },
+    {
+      "id": "card-2",
+      "text": "So you are the new kid. I'm Judy. My last sitting partner was the school's king, you know? You need to be sooo god to even compare yourself with him.",
+      "advice": false
+    },
+    {
+      "id": "card-3",
+      "text": "Our ruler! He was The King of the Sand Pit, Almost First of His Name (he has an older sister), The One Who Eated More Sandwiches in Jeremy's last birthday…",
+      "advice": false
+    },
+    {
+      "id": "card-4",
+      "text": "The thing is-- being the king (or queen) is <span class='bold-text'>SO</span> awesome. Wait, are you smiling? You think you can get to be… our new ruler?",
+      "advice": false
+    },
+    {
+      "id": "card-5",
+      "text": "What?! This one? Don't even think about it, <span class='bold-text'>I'm going to be the next king!</span> Do you hear me, kid?",
+      "advice": "Care! Depending on what you decide, your markers can change"
+    },
+    {
+      "id": "card-0",
+      "text": "Welcome! You are our new student, aren't you? We are so glad to meet you. There are two sits, where do you prefer to sit?",
+      "advice": "Welcome to Your Highness, choose an option to continue"
+    },
+    {
+      "id": "card-7",
+      "text": "You did good. He's Rocky. Fighting him is not a good idea.",
+      "advice": false
+    },
+    {
+      "id": "card-8",
+      "text": "Wow! Did you see? Your points changed! Giving Rocky a bad answer cost you one point of influence. You don't understand how this goes? Ok, ok, just… give me one of your Pokemon cards!",
+      "advice": false
+    },
+    {
+      "id": "card-9",
+      "text": "Wow! Did you see? Your points changed! Paying attention gave you one point of grades. You don't understand how this goes? Ok, ok, just… give me one of your Pokemon cards!",
+      "advice": false
+    },
+    {
+      "id": "card-10",
+      "text": "There! Your cards' marker is one point smaller. That's not good. Take your card back. If you get enough points, you will be our new ruler! You get it now?",
+      "advice": false
+    },
+    {
+      "id": "card-11",
+      "text": "Hahaha! You are smart! I wasn't going to steal it or anything, but it's fine. There, here you have one more card, look your marker up!",
+      "advice": false
+    },
+    {
+      "id": "card-12",
+      "text": "Ok, kids, time to recess and playtime! Be back in 30 minutes.",
+      "advice": false
+    },
+    {
+      "id": "card-6",
+      "text": "Well… that's Rocky. Maybe you shouldn't fight him, he is like… too intense, you know?",
+      "advice": false
+    },
+    {
+      "id": "card-13",
+      "text": "Great! Who do you want to meet first? I'll introduce you! Math club? They're nice…ish Or maybe the kindergarden kids? They have like <span class='bold-text'>A LOT</span> of influence.",
+      "advice": false
+    },
+    {
+      "id": "card-14",
+      "text": "New kid, huh? Do you want to get into our club? Ok, we'll test your math skills. Can you tell me the result of 457 + 13?",
+      "advice": false
+    },
+    {
+      "id": "card-15",
+      "text": "That was not difficult, Henry is kind of lazy on test. That's harder: what about 45 x 13?",
+      "advice": false
+    },
+    {
+      "id": "card-16",
+      "text": "Amira, Amira… Always with the kind questions. Ok, smart kid. Can you tell me how much is the square root of 121?",
+      "advice": false
+    },
+    {
+      "id": "card-17",
+      "text": "You got that right?! Wow. You have our respect, new kid. We will support you in your seek for the throne.",
+      "advice": false
+    },
+    {
+      "id": "card-18",
+      "text": "That was not difficult, actually. Henry is kind of lazy on test. That's harder: what about 45 x 13?",
+      "advice": false
+    },
+    {
+      "id": "card-19",
+      "text": "Amira, Amira… Always with the kind questions. So. Can you tell me how much is the square root of 121?",
+      "advice": false
+    },
+    {
+      "id": "card-20",
+      "text": "I knew you were going to fail that. Nobody is as smart as I, right? Don't worry. And here, have a Pokemon card, I am way to old for these.",
+      "advice": false
+    },
+    {
+      "id": "card-21",
+      "text": "So, kindergarden kids now?",
+      "advice": false
+    },
+    {
+      "id": "card-22",
+      "text": "<span class='kindergarden-text'>You are new! You are new! Do you want to meet my friend Olivia?</span>",
+      "advice": false
+    },
+    {
+      "id": "card-23",
+      "text": "<span class='kindergarden-text'>Hi! Do you like my hair? I just cut if myself!</span>",
+      "advice": false
+    },
+    {
+      "id": "card-24",
+      "text": "<span class='kindergarden-text'>I like you, new kid. Wait. IS THAT A PIKACHU CARD?!</span>",
+      "advice": false
+    },
+    {
+      "id": "card-26",
+      "text": "<span class='kindergarden-text'>Oh. Oh oh oh. We totally support you for being ruler of the school. You rock, new kid!</span>",
+      "advice": false
+    },
+    {
+      "id": "card-25",
+      "text": "<span class='kindergarden-text'>That's rude. Wait. IS THAT A PIKACHU CARD?!</span>",
+      "advice": false
+    },
+    {
+      "id": "card-27",
+      "text": "<span class='kindergarden-text'>Well, we don't want it anyway. BOOOOORED…</span>",
+      "advice": false
+    },
+    {
+      "id": "card-28",
+      "text": "Oh, no, we are late! We have to go to class, now, run!",
+      "advice": false
+    },
+    {
+      "id": "card-29",
+      "text": "Oh! You are new! Well, I hope you have been studying, because today we have our <span class=\"bold-text\">GEOGRAPHY TEST</span>.",
+      "advice": false
+    },
+    {
+      "id": "card-30",
+      "text": "Let's go, then. I reming you, the one that get the correct answer will get all this Pokemon cards, and an A+. ",
+      "advice": false
+    },
+    {
+      "id": "card-31",
+      "text": "Which is the capital city of Australia?",
+      "advice": false
+    },
+    {
+      "id": "card-32",
+      "text": "Yes! You are the only one that got it right. Here! Your Pokemon cards and… An A+!",
+      "advice": false
+    },
+    {
+      "id": "card-33",
+      "text": "No! So sorry, kid… that's not the correct answer! But Rocky, you got it right!",
+      "advice": false
+    }
+  ],
+  "character": [
+    {
+      "id": "card-1",
+      "name": "Prof. Raymond",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/1vyVF.svg?mouth=default"
+    },
+    {
+      "id": "card-2",
+      "name": "Judy",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/RBknc.svg?hairColor=black"
+    },
+    {
+      "id": "card-3",
+      "name": "Judy",
+      "background": "#FF6666",
+      "url": "https://avatars.dicebear.com/api/avataaars/RBknc.svg?hairColor=black&eyes=hearts"
+    },
+    {
+      "id": "card-4",
+      "name": "Judy",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/RBknc.svg?hairColor=black"
+    },
+    {
+      "id": "card-5",
+      "name": "Rocky",
+      "background": "#e11f22",
+      "url": "https://avatars.dicebear.com/api/avataaars/kXmtz.svg?hairColor=auburn&eyes=default&eyebrow=angryNatural&mouth=concerned"
+    },
+    {
+      "id": "card-0",
+      "name": "Prof. Manu Sancho",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/nSC3l.svg?hairColor=black&accessories=prescription02&accessoriesColor=black&clothes=graphicShirt&clothesColor=black&eyes=default&eyebrow=defaultNatural&mouth=smile&skin=light&clotheGraphics=bat&top=shortCurly&accessoriesChance=100&facialHairChance=100&facialHair=light&facialHairColor=black"
+    },
+    {
+      "id": "card-7",
+      "name": "Judy",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/RBknc.svg?hairColor=black&eyes=eyeRoll&mouth=sad"
+    },
+    {
+      "id": "card-8",
+      "name": "Judy",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/RBknc.svg?hairColor=black&eyes=surprised&mouth=disbelief"
+    },
+    {
+      "id": "card-9",
+      "name": "Judy",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/RBknc.svg?hairColor=black&eyes=surprised&mouth=disbelief"
+    },
+    {
+      "id": "card-10",
+      "name": "Judy",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/RBknc.svg?hairColor=black"
+    },
+    {
+      "id": "card-11",
+      "name": "Judy",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/RBknc.svg?hairColor=black&mouth=smile"
+    },
+    {
+      "id": "card-12",
+      "name": "Prof. Raymond",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/1vyVF.svg?mouth=default"
+    },
+    {
+      "id": "card-6",
+      "name": "Judy",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/RBknc.svg?hairColor=black&eyes=eyeRoll&mouth=sad"
+    },
+    {
+      "id": "card-13",
+      "name": "Judy",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/RBknc.svg?hairColor=black"
+    },
+    {
+      "id": "card-14",
+      "name": "Henry",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/UNBp4.svg"
+    },
+    {
+      "id": "card-15",
+      "name": "Amira",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/RGW9T.svg?eyes=default&eyebrow=defaultNatural"
+    },
+    {
+      "id": "card-16",
+      "name": "Billy",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/ZhpZS.svg"
+    },
+    {
+      "id": "card-17",
+      "name": "Billy",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/ZhpZS.svg?mouth=scream&eyes=surprised&eyebrow=raisedExcited"
+    },
+    {
+      "id": "card-18",
+      "name": "Amira",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/RGW9T.svg?eyes=default&eyebrow=defaultNatural"
+    },
+    {
+      "id": "card-19",
+      "name": "Billy",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/ZhpZS.svg"
+    },
+    {
+      "id": "card-20",
+      "name": "Billy",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/ZhpZS.svg?mouth=twinkle"
+    },
+    {
+      "id": "card-21",
+      "name": "Judy",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/RBknc.svg?hairColor=black"
+    },
+    {
+      "id": "card-22",
+      "name": "Millicent",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/6.svg?clothesColor=red"
+    },
+    {
+      "id": "card-23",
+      "name": "Olivia",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/1235.svg"
+    },
+    {
+      "id": "card-24",
+      "name": "Millicent",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/6.svg?clothesColor=red&mouth=scream"
+    },
+    {
+      "id": "card-25",
+      "name": "Millicent",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/6.svg?clothesColor=red&mouth=scream"
+    },
+    {
+      "id": "card-26",
+      "name": "Olivia",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/1235.svg?mouth=smile"
+    },
+    {
+      "id": "card-27",
+      "name": "Olivia",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/1235.svg?mouth=sad"
+    },
+    {
+      "id": "card-28",
+      "name": "Judy",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/RBknc.svg?hairColor=black&eyes=surprised&mouth=disbelief"
+    },
+    {
+      "id": "card-29",
+      "name": "Prof. William",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/hkOUe.svg"
+    },
+    {
+      "id": "card-30",
+      "name": "Prof. William",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/hkOUe.svg"
+    },
+    {
+      "id": "card-31",
+      "name": "Prof. William",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/hkOUe.svg"
+    },
+    {
+      "id": "card-32",
+      "name": "Prof. William",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/hkOUe.svg"
+    },
+    {
+      "id": "card-33",
+      "name": "Prof. William",
+      "background": "#fafafa",
+      "url": "https://avatars.dicebear.com/api/avataaars/hkOUe.svg"
+    }
+  ],
+  "accept": [
+    {
+      "id": "card-1",
+      "toCard": "card-2",
+      "text": "In the front"
+    },
+    {
+      "id": "card-2",
+      "toCard": "card-3",
+      "text": "Who?"
+    },
+    {
+      "id": "card-3",
+      "toCard": "card-4",
+      "text": "*sighs*"
+    },
+    {
+      "id": "card-4",
+      "toCard": "card-5",
+      "text": "Sure!"
+    },
+    {
+      "id": "card-5",
+      "toCard": "card-6",
+      "text": "I'll do whatever I want, you bully"
+    },
+    {
+      "id": "card-0",
+      "toCard": "card-2",
+      "text": "In the front"
+    },
+    {
+      "id": "card-7",
+      "toCard": "card-9",
+      "text": "I don't like him"
+    },
+    {
+      "id": "card-8",
+      "toCard": "card-10",
+      "text": "Err… ok, here you have it"
+    },
+    {
+      "id": "card-9",
+      "toCard": "card-10",
+      "text": "Err… ok, here you have it"
+    },
+    {
+      "id": "card-10",
+      "toCard": "card-12",
+      "text": "Yeah, kind of…"
+    },
+    {
+      "id": "card-11",
+      "toCard": "card-12",
+      "text": "*You take the card before she changes her mind*"
+    },
+    {
+      "id": "card-12",
+      "toCard": "card-13",
+      "text": "What am I going to do in 30 minutes?"
+    },
+    {
+      "id": "card-6",
+      "toCard": "card-8",
+      "text": "Ok, I'll keep it in mind"
+    },
+    {
+      "id": "card-13",
+      "toCard": "card-14",
+      "text": "The math club sounds good!"
+    },
+    {
+      "id": "card-14",
+      "toCard": "card-15",
+      "text": "470!"
+    },
+    {
+      "id": "card-15",
+      "toCard": "card-16",
+      "text": "That's 585, pretty sure."
+    },
+    {
+      "id": "card-16",
+      "toCard": "card-20",
+      "text": "Maybe… 13,50?"
+    },
+    {
+      "id": "card-17",
+      "toCard": "card-21",
+      "text": "I will remember your promise."
+    },
+    {
+      "id": "card-18",
+      "toCard": "card-16",
+      "text": "That's 585, pretty sure."
+    },
+    {
+      "id": "card-19",
+      "toCard": "card-17",
+      "text": "That's 11! Isn't it?"
+    },
+    {
+      "id": "card-20",
+      "toCard": "card-21",
+      "text": "Keep it. You are way too much proud of yourself, you know?"
+    },
+    {
+      "id": "card-21",
+      "toCard": "card-22",
+      "text": "Sure!"
+    },
+    {
+      "id": "card-22",
+      "toCard": "card-23",
+      "text": "Sure…"
+    },
+    {
+      "id": "card-23",
+      "toCard": "card-25",
+      "text": "Maybe you shouldn't do that."
+    },
+    {
+      "id": "card-24",
+      "toCard": "card-26",
+      "text": "Yes! Do you want it? Take it!"
+    },
+    {
+      "id": "card-25",
+      "toCard": "card-28",
+      "text": "I think so… Here, take it."
+    },
+    {
+      "id": "card-26",
+      "toCard": "card-28",
+      "text": "Wise call."
+    },
+    {
+      "id": "card-27",
+      "toCard": "card-28",
+      "text": "…"
+    },
+    {
+      "id": "card-28",
+      "toCard": "card-29",
+      "text": "What?! Let's go, hurry!"
+    },
+    {
+      "id": "card-29",
+      "toCard": "card-30",
+      "text": "Oh, no…"
+    },
+    {
+      "id": "card-30",
+      "toCard": "card-31",
+      "text": "I'm so nervous!"
+    },
+    {
+      "id": "card-31",
+      "toCard": "card-32",
+      "text": "… Canberra?"
+    },
+    {
+      "id": "card-32",
+      "toCard": "card-34",
+      "text": "Thank you so much!"
+    },
+    {
+      "id": "card-33",
+      "toCard": "card-34",
+      "text": "Oh…"
+    }
+  ],
+  "decline": [
+    {
+      "id": "card-1",
+      "toCard": "card-2",
+      "text": "In the back"
+    },
+    {
+      "id": "card-2",
+      "toCard": "card-3",
+      "text": "A king?"
+    },
+    {
+      "id": "card-3",
+      "toCard": "card-4",
+      "text": "Err…"
+    },
+    {
+      "id": "card-4",
+      "toCard": "card-5",
+      "text": "I don't know, maybe?"
+    },
+    {
+      "id": "card-5",
+      "toCard": "card-7",
+      "text": "*You don't answer, and start paying attention to the class*"
+    },
+    {
+      "id": "card-0",
+      "toCard": "card-2",
+      "text": "In the back"
+    },
+    {
+      "id": "card-7",
+      "toCard": "card-9",
+      "text": "He doesn't worth it"
+    },
+    {
+      "id": "card-8",
+      "toCard": "card-11",
+      "text": "You can't fool me, I want to keep my cards"
+    },
+    {
+      "id": "card-9",
+      "toCard": "card-11",
+      "text": "You can't fool me, I want to keep my cards"
+    },
+    {
+      "id": "card-10",
+      "toCard": "card-12",
+      "text": "Got it!"
+    },
+    {
+      "id": "card-11",
+      "toCard": "card-12",
+      "text": "*You don't take the card, and smile back*"
+    },
+    {
+      "id": "card-12",
+      "toCard": "card-13",
+      "text": "Only 30 minutes?"
+    },
+    {
+      "id": "card-6",
+      "toCard": "card-8",
+      "text": "I don't care about him"
+    },
+    {
+      "id": "card-13",
+      "toCard": "card-15",
+      "text": "Kindergarden kids, I suppose?"
+    },
+    {
+      "id": "card-14",
+      "toCard": "card-18",
+      "text": "440… ?"
+    },
+    {
+      "id": "card-15",
+      "toCard": "card-19",
+      "text": "Err… Can I go now?"
+    },
+    {
+      "id": "card-16",
+      "toCard": "card-17",
+      "text": "That's 11! Isn't it?"
+    },
+    {
+      "id": "card-17",
+      "toCard": "card-21",
+      "text": "Thank you, Billy. I will meet you in the math club"
+    },
+    {
+      "id": "card-18",
+      "toCard": "card-19",
+      "text": "Err… Can I go now?"
+    },
+    {
+      "id": "card-19",
+      "toCard": "card-20",
+      "text": "Maybe… 13,50?"
+    },
+    {
+      "id": "card-20",
+      "toCard": "card-21",
+      "text": "Ok, that's something, I suppose."
+    },
+    {
+      "id": "card-21",
+      "toCard": "card-29",
+      "text": "I prefer going to study some math…"
+    },
+    {
+      "id": "card-22",
+      "toCard": "card-23",
+      "text": "Why not?"
+    },
+    {
+      "id": "card-23",
+      "toCard": "card-24",
+      "text": "You look great!"
+    },
+    {
+      "id": "card-24",
+      "toCard": "card-27",
+      "text": "It is, but it's mine, sorry."
+    },
+    {
+      "id": "card-25",
+      "toCard": "card-27",
+      "text": "It is, but it's mine, sorry."
+    },
+    {
+      "id": "card-26",
+      "toCard": "card-28",
+      "text": "My kingdom is closer!"
+    },
+    {
+      "id": "card-27",
+      "toCard": "card-28",
+      "text": "That's…"
+    },
+    {
+      "id": "card-28",
+      "toCard": "card-29",
+      "text": "Chill, Judy. Well… ok, let's go."
+    },
+    {
+      "id": "card-29",
+      "toCard": "card-30",
+      "text": "Yay! I love geography."
+    },
+    {
+      "id": "card-30",
+      "toCard": "card-31",
+      "text": "I want those cards!"
+    },
+    {
+      "id": "card-31",
+      "toCard": "card-33",
+      "text": "… Sydney?"
+    },
+    {
+      "id": "card-32",
+      "toCard": "card-34",
+      "text": "Take that, Rocky!"
+    },
+    {
+      "id": "card-33",
+      "toCard": "card-34",
+      "text": "What's a Canberra?"
+    }
+  ],
+  "modifiers": [
+    {
+      "id": "card-1-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-1-decline",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-2-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-2-decline",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-3-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-3-decline",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-4-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-4-decline",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-5-decline",
+      "influence": 0,
+      "grades": 1,
+      "collection": 0
+    },
+    {
+      "id": "card-5-accept",
+      "influence": -1,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-0-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-0-decline",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-7-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-7-decline",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-8-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": -1
+    },
+    {
+      "id": "card-8-decline",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-9-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": -1
+    },
+    {
+      "id": "card-9-decline",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-10-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": 1
+    },
+    {
+      "id": "card-10-decline",
+      "influence": 0,
+      "grades": 0,
+      "collection": 1
+    },
+    {
+      "id": "card-11-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": 1
+    },
+    {
+      "id": "card-11-decline",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-12-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-12-decline",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-6-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-6-decline",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-13-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-13-decline",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-14-accept",
+      "influence": 0,
+      "grades": 1,
+      "collection": 0
+    },
+    {
+      "id": "card-14-decline",
+      "influence": 0,
+      "grades": -1,
+      "collection": 0
+    },
+    {
+      "id": "card-15-accept",
+      "influence": 0,
+      "grades": 1,
+      "collection": 0
+    },
+    {
+      "id": "card-15-decline",
+      "influence": 0,
+      "grades": -1,
+      "collection": 0
+    },
+    {
+      "id": "card-16-accept",
+      "influence": 0,
+      "grades": -1,
+      "collection": 0
+    },
+    {
+      "id": "card-16-decline",
+      "influence": 0,
+      "grades": 1,
+      "collection": 0
+    },
+    {
+      "id": "card-17-accept",
+      "influence": 2,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-17-decline",
+      "influence": 2,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-18-accept",
+      "influence": 0,
+      "grades": 1,
+      "collection": 0
+    },
+    {
+      "id": "card-18-decline",
+      "influence": 0,
+      "grades": -1,
+      "collection": 0
+    },
+    {
+      "id": "card-19-accept",
+      "influence": 0,
+      "grades": 1,
+      "collection": 0
+    },
+    {
+      "id": "card-19-decline",
+      "influence": 0,
+      "grades": -1,
+      "collection": 0
+    },
+    {
+      "id": "card-20-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-20-decline",
+      "influence": 0,
+      "grades": 0,
+      "collection": 1
+    },
+    {
+      "id": "card-21-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-21-decline",
+      "influence": 0,
+      "grades": 1,
+      "collection": 0
+    },
+    {
+      "id": "card-22-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-22-decline",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-23-accept",
+      "influence": -1,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-23-decline",
+      "influence": 1,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-24-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": -1
+    },
+    {
+      "id": "card-24-decline",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-25-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": -1
+    },
+    {
+      "id": "card-25-decline",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-26-accept",
+      "influence": 2,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-26-decline",
+      "influence": 2,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-27-accept",
+      "influence": -2,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-27-decline",
+      "influence": -2,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-28-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-28-decline",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-29-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-29-decline",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-30-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-30-decline",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-31-accept",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-31-decline",
+      "influence": 0,
+      "grades": 0,
+      "collection": 0
+    },
+    {
+      "id": "card-32-accept",
+      "influence": 10,
+      "grades": 10,
+      "collection": 10
+    },
+    {
+      "id": "card-32-decline",
+      "influence": 10,
+      "grades": 10,
+      "collection": 10
+    },
+    {
+      "id": "card-33-accept",
+      "influence": -10,
+      "grades": -10,
+      "collection": -10
+    },
+    {
+      "id": "card-33-decline",
+      "influence": -10,
+      "grades": -10,
+      "collection": -10
+    }
+  ]
+}
