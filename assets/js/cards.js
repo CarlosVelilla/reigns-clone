@@ -27,28 +27,24 @@ function createCard(cardId, firstCard) {
   // TODO REFACTOR
   fetch(`${URL}/accept/${cardId}`)
     .then((response) => response.json())
-    .then((rawData) => {
-      console.log(rawData);
-      const data = rawData[0];
+    .then((data) => {
       ACCEPTBTN.setAttribute('data-tocard', data.toCard);
-      ACCEPTBTN.setAttribute('data-cardid', cardId);
+      ACCEPTBTN.setAttribute('data-cardid', data.id);
       ACCEPTBTN.textContent = data.text;
     });
 
   fetch(`${URL}/decline/${cardId}`)
     .then((response) => response.json())
-    .then((rawData) => {
-      const data = rawData[0];
+    .then((data) => {
       DECLINEBTN.setAttribute('data-tocard', data.toCard);
-      DECLINEBTN.setAttribute('data-cardid', cardId);
+      DECLINEBTN.setAttribute('data-cardid', data.id);
       DECLINEBTN.textContent = data.text;
     });
 
   /* PRINTING CARD TITLE AND ADVICE */
   fetch(`${URL}/content/${cardId}`)
     .then((response) => response.json())
-    .then((rawData) => {
-      const data = rawData[0];
+    .then((data) => {
       TEXT.innerHTML = data.text;
       data.advice === false
         ? (ADVICE.textContent = '')
@@ -58,8 +54,7 @@ function createCard(cardId, firstCard) {
   /* PRINTING CHARACTER INFO */
   fetch(`${URL}/character/${cardId}`)
     .then((response) => response.json())
-    .then((rawData) => {
-      const data = rawData[0];
+    .then((data) => {
       CHARACTERIMAGE.src = data.url;
       CHARACTERNAME.textContent = data.name;
       CHARACTERIMAGE.style.backgroundColor = data.background;
@@ -97,8 +92,7 @@ function editScore(event) {
   let action = event.target.dataset.action;
   fetch(`${URL}/modifiers/${cardId}-${action}`)
     .then((response) => response.json())
-    .then((rawData) => {
-      const data = rawData[0];
+    .then((data) => {
       Object.keys(data).forEach((factor) => {
         if (factor != 'id') {
           editFactor(factor, parseInt(data[factor]));
