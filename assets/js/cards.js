@@ -2,8 +2,8 @@ import { gameModeModifier, gameMode } from './main.js';
 import { gameOverWindow } from './gameover.js';
 
 /* GLOBAL VARIABLES */
-// const URL = "http://localhost:3000";
-const URL = 'https://your-highness.herokuapp.com';
+const URL = 'http://localhost:3000';
+// const URL = 'https://your-highness.herokuapp.com';
 
 function createCard(cardId, firstCard) {
   const ACCEPTBTN = document.getElementById('accept-button');
@@ -27,7 +27,8 @@ function createCard(cardId, firstCard) {
   // TODO REFACTOR
   fetch(`${URL}/accept/${cardId}`)
     .then((response) => response.json())
-    .then((data) => {
+    .then((rawData) => {
+      const data = rawData[0];
       ACCEPTBTN.setAttribute('data-tocard', data.toCard);
       ACCEPTBTN.setAttribute('data-cardid', cardId);
       ACCEPTBTN.textContent = data.text;
@@ -35,7 +36,8 @@ function createCard(cardId, firstCard) {
 
   fetch(`${URL}/decline/${cardId}`)
     .then((response) => response.json())
-    .then((data) => {
+    .then((rawData) => {
+      const data = rawData[0];
       DECLINEBTN.setAttribute('data-tocard', data.toCard);
       DECLINEBTN.setAttribute('data-cardid', cardId);
       DECLINEBTN.textContent = data.text;
@@ -44,7 +46,8 @@ function createCard(cardId, firstCard) {
   /* PRINTING CARD TITLE AND ADVICE */
   fetch(`${URL}/content/${cardId}`)
     .then((response) => response.json())
-    .then((data) => {
+    .then((rawData) => {
+      const data = rawData[0];
       TEXT.innerHTML = data.text;
       data.advice === false
         ? (ADVICE.textContent = '')
@@ -54,7 +57,8 @@ function createCard(cardId, firstCard) {
   /* PRINTING CHARACTER INFO */
   fetch(`${URL}/character/${cardId}`)
     .then((response) => response.json())
-    .then((data) => {
+    .then((rawData) => {
+      const data = rawData[0];
       CHARACTERIMAGE.src = data.url;
       CHARACTERNAME.textContent = data.name;
       CHARACTERIMAGE.style.backgroundColor = data.background;
@@ -90,17 +94,16 @@ function toggleDataDisplayed() {
 function editScore(event) {
   let cardId = event.target.dataset.cardid;
   let action = event.target.dataset.action;
-  console.log(cardId);
-  console.log(action);
   fetch(`${URL}/modifiers/${cardId}-${action}`)
     .then((response) => response.json())
-    .then((data) =>
+    .then((rawData) => {
+      const data = rawData[0];
       Object.keys(data).forEach((factor) => {
         if (factor != 'id') {
           editFactor(factor, parseInt(data[factor]));
         }
-      })
-    );
+      });
+    });
 }
 
 function editFactor(factor, points) {
