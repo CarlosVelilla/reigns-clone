@@ -28,7 +28,6 @@ function createCard(cardId, firstCard) {
   fetch(`${URL}/accept/${cardId}`)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       ACCEPTBTN.setAttribute('data-tocard', data.toCard);
       ACCEPTBTN.setAttribute('data-cardid', cardId);
       ACCEPTBTN.textContent = data.text;
@@ -91,6 +90,8 @@ function toggleDataDisplayed() {
 function editScore(event) {
   let cardId = event.target.dataset.cardid;
   let action = event.target.dataset.action;
+  console.log(cardId);
+  console.log(action);
   fetch(`${URL}/modifiers/${cardId}-${action}`)
     .then((response) => response.json())
     .then((data) =>
