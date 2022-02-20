@@ -28,6 +28,7 @@ function createCard(cardId, firstCard) {
   fetch(`${URL}/accept/${cardId}`)
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       ACCEPTBTN.setAttribute('data-tocard', data.toCard);
       ACCEPTBTN.setAttribute('data-cardid', cardId);
       ACCEPTBTN.textContent = data.text;
