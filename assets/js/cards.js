@@ -2,8 +2,8 @@ import { gameModeModifier, gameMode } from './main.js';
 import { gameOverWindow } from './gameover.js';
 
 /* GLOBAL VARIABLES */
-const URL = 'http://localhost:3000';
-// const URL = 'https://your-highness.herokuapp.com';
+// const URL = 'http://localhost:3000';
+const URL = 'https://your-highness.herokuapp.com';
 
 function createCard(cardId, firstCard) {
   const ACCEPTBTN = document.getElementById('accept-button');
