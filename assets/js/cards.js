@@ -28,6 +28,7 @@ function createCard(cardId, firstCard) {
   fetch(`${URL}/accept/${cardId}`)
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       ACCEPTBTN.setAttribute('data-tocard', data.toCard);
       ACCEPTBTN.setAttribute('data-cardid', data.id);
       ACCEPTBTN.textContent = data.text;
@@ -36,6 +37,7 @@ function createCard(cardId, firstCard) {
   fetch(`${URL}/decline/${cardId}`)
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       DECLINEBTN.setAttribute('data-tocard', data.toCard);
       DECLINEBTN.setAttribute('data-cardid', data.id);
       DECLINEBTN.textContent = data.text;
@@ -45,6 +47,7 @@ function createCard(cardId, firstCard) {
   fetch(`${URL}/content/${cardId}`)
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       TEXT.innerHTML = data.text;
       data.advice === false
         ? (ADVICE.textContent = '')
@@ -55,6 +58,7 @@ function createCard(cardId, firstCard) {
   fetch(`${URL}/character/${cardId}`)
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       CHARACTERIMAGE.src = data.url;
       CHARACTERNAME.textContent = data.name;
       CHARACTERIMAGE.style.backgroundColor = data.background;
@@ -93,6 +97,7 @@ function editScore(event) {
   fetch(`${URL}/modifiers/${cardId}-${action}`)
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       Object.keys(data).forEach((factor) => {
         if (factor != 'id') {
           editFactor(factor, parseInt(data[factor]));
